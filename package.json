@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/youngMaster46/zavitok.git"
   },
-  "author": "",
+  "author": "Max Kaplin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/youngMaster46/zavitok/issues"
@@ -20,6 +21,7 @@
   "dependencies": {},
   "devDependencies": {
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
