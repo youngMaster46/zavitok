@@ -4,7 +4,7 @@
   "description": "Сайт ковки",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/youngMaster46/zavitok/issues"
   },
-  "homepage": "https://github.com/youngMaster46/zavitok#readme"
+  "homepage": "https://github.com/youngMaster46/zavitok#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
 }
