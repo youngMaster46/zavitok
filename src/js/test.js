@@ -1,2 +1,2 @@
 console.log('test file js');
-export default 'THIS IS BAGDA';
+export default 'THIS IS dyadya BAGDA';
