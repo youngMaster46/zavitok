@@ -1,3 +1,4 @@
+import '../sass/style.scss';
 import string from "./test";
 let a = (varing) => `hello ${varing}`;
 

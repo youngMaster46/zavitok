@@ -3561,7 +3561,7 @@ eval("__webpack_require__(/*! ../modules/web.timers */ \"./node_modules/core-js/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n\n\nvar a = function a(varing) {\n  return \"hello \".concat(varing);\n};\n\na('MMMMMMMMMMMMMMMMAAAAAAAAAAAACXXXXXXXXXXX');\nconsole.log(\"i imported \".concat(_test__WEBPACK_IMPORTED_MODULE_0__[\"default\"], \" from another modules!\"));\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/style.scss */ \"./src/sass/style.scss\");\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n\n\n\nvar a = function a(varing) {\n  return \"hello \".concat(varing);\n};\n\na('MMMMMMMMMMMMMMMMAAAAAAAAAAAACXXXXXXXXXXX');\nconsole.log(\"i imported \".concat(_test__WEBPACK_IMPORTED_MODULE_1__[\"default\"], \" from another modules!\"));\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
@@ -3574,6 +3574,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tes
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\nconsole.log('test file js');\n/* harmony default export */ __webpack_exports__[\"default\"] = ('THIS IS dyadya BAGDA');\n\n//# sourceURL=webpack:///./src/js/test.js?");
+
+/***/ }),
+
+/***/ "./src/sass/style.scss":
+/*!*****************************!*\
+  !*** ./src/sass/style.scss ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/style.scss?");
 
 /***/ }),
 
