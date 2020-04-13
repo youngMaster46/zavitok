@@ -50,3 +50,60 @@
   text-decoration: none;
   color: white; }
 
+.footer {
+  display: flex;
+  min-height: 300px;
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.8), transparent 2px, #141414 2px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.8), #141414 2px); }
+  .footer-about-us {
+    color: #777777;
+    padding: 80px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; }
+    .footer-about-us h3 {
+      color: white;
+      font-size: 2rem;
+      padding-bottom: 30px; }
+    .footer-about-us__description {
+      font-family: "Open Sans", sans-serif;
+      line-height: 2rem;
+      text-shadow: 1px 1px 0px black;
+      position: relative;
+      font-style: italic; }
+      .footer-about-us__description:after {
+        bottom: -10px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 20px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 3px solid #fc9f4e;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        position: absolute; }
+      .footer-about-us__description:before {
+        top: -10px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 20px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 3px solid #fc9f4e;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        position: absolute; }
+    .footer-about-us__link {
+      font-size: 1.3rem;
+      margin-top: 50px;
+      cursor: pointer;
+      border-bottom: 1px dashed white;
+      display: inline-block;
+      align-self: center;
+      color: #777777; }
+      .footer-about-us__link:hover {
+        color: white; }
+

@@ -1,0 +1,4 @@
+@mixin line-gradient($deg1, $color1, $color11, $deg2, $color2, $color22) {
+    background-image: repeating-linear-gradient($deg1, $color1, transparent 2px, $color11),
+        repeating-linear-gradient($deg2, $color2, $color22);
+}
