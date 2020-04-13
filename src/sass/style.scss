@@ -1,4 +1,103 @@
-$bg-color: green;
-body {
-    background: $bg-color;
+$header-background: #272626;
+$default-color: black;
+$header-color:white;
+$paragraph-color: #777777;
+$first-linear-color: rgba(0, 0, 0, .8);
+$second-linear-color: #141414;
+
+@mixin line-gradient($deg1, $color1, $color11, $deg2, $color2, $color22) {
+    background-image: repeating-linear-gradient($deg1, $color1, transparent 5px, $color11),
+        repeating-linear-gradient($deg2, $color2, $color22);
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: "Georgia", sans-serif;
+}
+
+.header {
+    background-color: $header-background;
+    min-height: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &-navigation {
+        order: 1;
+        color: $header-color;
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            transition: .5s;
+
+
+        }
+
+        &__item {
+            list-style-type: none;
+            padding: 15px 45px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 1px solid $header-color;
+            transition: .5s;
+            opacity: .8;
+
+            &:hover {
+                opacity: 1;
+                transform: translateY(10px);
+                background-color: $default-color;
+            }
+
+            &_active {
+                opacity: 1;
+                background-color: $default-color;
+
+                &:hover {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+    .zavitok-logo {
+        color: white;
+
+        &__heading {
+            font-size: 3rem;
+        }
+
+        &__text {
+            color: rgb(252, 159, 78);
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: $header-color;
+}
+
+
+
+// @keyframes customOpacity {
+//     0% {
+//         opacity: 1;
+//     }
+
+//     50% {
+//         opacity: .7;
+//     }
+
+//     100% {
+//         opacity: .5;
+//     }
+// }

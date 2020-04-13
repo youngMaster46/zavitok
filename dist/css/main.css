@@ -1,3 +1,52 @@
-body {
-  background: green; }
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px; }
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "Georgia", sans-serif; }
+
+.header {
+  background-color: #272626;
+  min-height: 170px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .header-navigation {
+    order: 1;
+    color: white; }
+    .header-navigation__list {
+      display: flex;
+      justify-content: space-between;
+      transition: .5s; }
+    .header-navigation__item {
+      list-style-type: none;
+      padding: 15px 45px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid white;
+      transition: .5s;
+      opacity: .8; }
+      .header-navigation__item:hover {
+        opacity: 1;
+        transform: translateY(10px);
+        background-color: black; }
+      .header-navigation__item_active {
+        opacity: 1;
+        background-color: black; }
+        .header-navigation__item_active:hover {
+          transform: translateY(0); }
+  .header .zavitok-logo {
+    color: white; }
+    .header .zavitok-logo__heading {
+      font-size: 3rem; }
+    .header .zavitok-logo__text {
+      color: #fc9f4e;
+      font-size: 1.2rem; }
+
+.link {
+  text-decoration: none;
+  color: white; }
 
