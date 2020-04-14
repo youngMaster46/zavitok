@@ -2,3 +2,16 @@
     background-image: repeating-linear-gradient($deg1, $color1, transparent 2px, $color11),
         repeating-linear-gradient($deg2, $color2, $color22);
 }
+
+@mixin zavitok {
+    color: $page-color;
+
+    &__heading {
+        font-size: 3rem;
+    }
+
+    &__text {
+        color: $additional-color;
+        font-size: 1.2rem;
+    }
+}

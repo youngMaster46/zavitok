@@ -59,16 +59,7 @@
     }
 
     .zavitok-logo {
-        color: $page-color;
-
-        &__heading {
-            font-size: 3rem;
-        }
-
-        &__text {
-            color: $additional-color;
-            font-size: 1.2rem;
-        }
+        @include zavitok;
     }
 }
 
@@ -77,10 +68,10 @@
     color: $page-color;
 }
 
-.footer {
+.forging {
     display: flex;
     min-height: 300px;
-    @include line-gradient(45deg, $first-linear-color, $second-linear-color 2px, 135deg, $first-linear-color, $second-linear-color 2px);
+    @include line-gradient(45deg, rgba(0, 0, 0, .7), $first-linear-color 2px, 135deg, rgba(0, 0, 0, .7), $first-linear-color 2px);
 
     &-about-us {
         color: $paragraph-color;
@@ -151,16 +142,100 @@
     }
 }
 
-// @keyframes customOpacity {
-//     0% {
-//         opacity: 1;
-//     }
+.footer {
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include line-gradient(45deg, $first-linear-color, $second-linear-color 2px, 135deg, $first-linear-color, $second-linear-color 2px);
 
-//     50% {
-//         opacity: .7;
-//     }
+    .wrapper {
 
-//     100% {
-//         opacity: .5;
-//     }
-// }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1024px;
+        align-items: center;
+    }
+
+    &-navigation {
+
+        &__list {
+            display: flex;
+            justify-content: space-around;
+            transition: .5s;
+            margin-top: 4rem;
+
+        }
+
+        &__item {
+            list-style-type: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: .5s;
+            opacity: .8;
+            padding: 1rem 4rem;
+
+            &:hover {
+                opacity: 1;
+
+            }
+
+            a {
+                &:hover {
+                    color: $additional-color;
+                }
+            }
+
+            &_active {
+                opacity: 1;
+                color: $additional-color;
+
+                &:hover {
+                    transform: scale(1);
+                }
+
+                a {
+                    color: $additional-color;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        order: -1;
+    }
+
+    .zavitok-logo {
+        @include zavitok;
+    }
+
+    &__group {
+        margin-top: 1rem;
+        color: gray;
+        border: 3px dashed gray;
+        border-radius: 50%;
+        padding: 1rem;
+        cursor: pointer;
+        transition: .5s;
+
+        a {
+            transition: .5s;
+        }
+
+        &:hover {
+            border-color: $additional-color;
+        }
+
+        &:hover a {
+            color: $third-color;
+        }
+    }
+
+    .developer {
+        color: gray;
+        line-height: 5rem;
+    }
+}
