@@ -114,6 +114,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-top: 3rem;
   background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.8), transparent 2px, #141414 2px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.8), #141414 2px); }
   .footer .wrapper {
     display: flex;
@@ -166,8 +167,85 @@
     .footer__group:hover {
       border-color: #fc9f4e; }
     .footer__group:hover a {
-      color: #ff4a57; }
+      color: #0026ff; }
   .footer .developer {
     color: gray;
-    line-height: 5rem; }
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    opacity: .9; }
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: url(/dist/img/anvil.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .main-description {
+    text-align: center;
+    margin-top: 5rem; }
+    .main-description__heading {
+      color: white;
+      font-size: 2rem;
+      padding-bottom: 30px;
+      margin-top: 2rem; }
+    .main-description__text {
+      color: #fc9f4e;
+      font-size: 1.3rem;
+      line-height: 2rem; }
+  .main-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem; }
+    .main-list__item {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 2rem;
+      margin: 20px;
+      background-color: #23263a;
+      color: white;
+      font-family: 'Poppins', sans-serif; }
+    .main-list__heading {
+      font-size: 1.25rem;
+      margin-top: 2rem; }
+    .main-list__text {
+      font-size: 1rem;
+      margin-top: 2rem;
+      line-height: 1.7rem; }
+    .main-list__image {
+      max-width: 100%; }
+
+.latest-work {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding-top: 1rem;
+  background-image: repeating-linear-gradient(45deg, #23263a, transparent 2px, #141414 2px), repeating-linear-gradient(135deg, #23263a, #141414 2px); }
+  .latest-work__heading {
+    font-size: 2rem;
+    margin: 5rem 0; }
+  .latest-work__jobs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+  .latest-work__job {
+    width: 20%;
+    margin: 0 1rem 3rem 1rem; }
+  .latest-work__description {
+    color: black;
+    margin-top: 2rem; }
+    .latest-work__description span {
+      color: white; }
+  .latest-work__image {
+    border-radius: 50%;
+    width: 16rem;
+    height: 16rem;
+    transition: .5s;
+    opacity: .9; }
+    .latest-work__image:hover {
+      transform: scale(1.5);
+      opacity: 1; }
 

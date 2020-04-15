@@ -1,5 +1,6 @@
 @import "_var";
 @import "_mixins";
+@import "_templates";
 
 * {
     padding: 0;
@@ -149,6 +150,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 3rem;
     @include line-gradient(45deg, $first-linear-color, $second-linear-color 2px, 135deg, $first-linear-color, $second-linear-color 2px);
 
     .wrapper {
@@ -236,6 +238,120 @@
 
     .developer {
         color: gray;
-        line-height: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        opacity: .9;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url(../img/anvil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-description {
+        text-align: center;
+        margin-top: 5rem;
+
+        &__heading {
+            color: $page-color;
+            font-size: 2rem;
+            padding-bottom: 30px;
+            margin-top: 2rem;
+        }
+
+        &__text {
+            color: $additional-color;
+            font-size: 1.3rem;
+            line-height: 2rem;
+        }
+    }
+
+    &-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+
+        &__item {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            padding: 3rem 2rem;
+            margin: 20px;
+            background-color: $four-color;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        &__heading {
+            font-size: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        &__text {
+            font-size: 1rem;
+            margin-top: 2rem;
+            line-height: 1.7rem;
+        }
+
+        &__image {
+            max-width: 100%;
+        }
+    }
+}
+
+.latest-work {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: $page-color;
+    padding-top: 1rem;
+    @include line-gradient(45deg, $four-color, $second-linear-color 2px, 135deg, $four-color, $second-linear-color 2px);
+
+
+    &__heading {
+        font-size: 2rem;
+        margin: 5rem 0;
+    }
+
+    &__jobs {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    &__job {
+        width: 20%;
+        margin: 0 1rem 3rem 1rem;
+
+    }
+
+    &__description {
+        color: black;
+        margin-top: 2rem;
+
+        span {
+            color: $page-color;
+        }
+    }
+
+    &__link {}
+
+    &__image {
+        border-radius: 50%;
+        width: 16rem;
+        height: 16rem;
+        transition: .5s;
+        opacity: .9;
+
+        &:hover {
+            transform: scale(1.5);
+            opacity: 1;
+        }
+
     }
 }
