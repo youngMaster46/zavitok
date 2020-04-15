@@ -17,6 +17,9 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'prepare.html'
+        }),
         new MiniCssExtractPlugin({
             filename: '/css/[name].css',
         })
@@ -48,7 +51,7 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             name: '[name].[ext]',
-                            outputPath:  '/dist/img',
+                            outputPath: '/dist/img',
 
                         }
                     }

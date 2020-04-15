@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 .container {
@@ -75,11 +76,12 @@
     @include line-gradient(45deg, rgba(0, 0, 0, .7), $first-linear-color 2px, 135deg, rgba(0, 0, 0, .7), $first-linear-color 2px);
 
     &-about-us {
-        color: $paragraph-color;
+        color: $page-color;
         padding: 80px 60px;
         text-align: center;
         display: flex;
         flex-direction: column;
+        @include t-shadow-standart();
 
         h3 {
             color: $page-color;
@@ -299,8 +301,18 @@
             line-height: 1.7rem;
         }
 
+        &__icon {
+            width: 100%;
+            overflow: hidden;
+        }
+
         &__image {
             max-width: 100%;
+            transition: .7s;
+
+            &:hover {
+                transform: scale(2);
+            }
         }
     }
 }
@@ -310,6 +322,7 @@
     font-family: 'Poppins', sans-serif;
     color: $page-color;
     padding-top: 1rem;
+    padding-bottom: 3rem;
     @include line-gradient(45deg, $four-color, $second-linear-color 2px, 135deg, $four-color, $second-linear-color 2px);
 
 
@@ -339,17 +352,21 @@
         }
     }
 
-    &__link {}
+    &__link {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
 
     &__image {
         border-radius: 50%;
         width: 16rem;
         height: 16rem;
-        transition: .5s;
+        transition: .7s;
         opacity: .9;
 
         &:hover {
-            transform: scale(1.5);
+            transform: scale(2);
             opacity: 1;
         }
 

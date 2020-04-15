@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  font-size: 16px; }
+  font-size: 16px;
+  box-sizing: border-box; }
 
 .container {
   max-width: 1440px;
@@ -55,11 +56,12 @@
   min-height: 300px;
   background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.7), transparent 2px, rgba(0, 0, 0, 0.8) 2px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) 2px); }
   .forging-about-us {
-    color: #777777;
+    color: white;
     padding: 80px 60px;
     text-align: center;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    text-shadow: 1px 1px 1px black; }
     .forging-about-us h3 {
       color: white;
       font-size: 2rem;
@@ -215,14 +217,21 @@
       font-size: 1rem;
       margin-top: 2rem;
       line-height: 1.7rem; }
+    .main-list__icon {
+      width: 100%;
+      overflow: hidden; }
     .main-list__image {
-      max-width: 100%; }
+      max-width: 100%;
+      transition: .7s; }
+      .main-list__image:hover {
+        transform: scale(2); }
 
 .latest-work {
   text-align: center;
   font-family: 'Poppins', sans-serif;
   color: white;
   padding-top: 1rem;
+  padding-bottom: 3rem;
   background-image: repeating-linear-gradient(45deg, #23263a, transparent 2px, #141414 2px), repeating-linear-gradient(135deg, #23263a, #141414 2px); }
   .latest-work__heading {
     font-size: 2rem;
@@ -239,13 +248,17 @@
     margin-top: 2rem; }
     .latest-work__description span {
       color: white; }
+  .latest-work__link {
+    display: block;
+    width: 100%;
+    overflow: hidden; }
   .latest-work__image {
     border-radius: 50%;
     width: 16rem;
     height: 16rem;
-    transition: .5s;
+    transition: .7s;
     opacity: .9; }
     .latest-work__image:hover {
-      transform: scale(1.5);
+      transform: scale(2);
       opacity: 1; }
 
