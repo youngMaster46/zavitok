@@ -1,6 +1,22 @@
-import '../sass/style.scss';
-import string from "./test";
-let a = (varing) => `hello ${varing}`;
+import '../sass/style.scss'
+import Gallery from './gallery'
 
-a('MMMMMMMMMMMMMMMMAAAAAAAAAAAACXXXXXXXXXXX');
-console.log(`i imported ${string} from another modules!`);
+function getFirstClassName(elem) {
+    return document.getElementsByClassName(elem)[0]
+}
+
+const bagda = new Gallery('gallery__wrapper')
+
+const leftBut = getFirstClassName('arrowLeft')
+const rightBut = getFirstClassName('arrowRight')
+
+leftBut.addEventListener('click', () => {
+    bagda.moveLeft()
+})
+rightBut.addEventListener('click', () => {
+    bagda.moveRight();
+})
+
+
+
+

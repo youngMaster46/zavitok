@@ -15,6 +15,20 @@
         font-size: 1.2rem;
     }
 }
-@mixin t-shadow-standart {
-    text-shadow: 1px 1px 1px $default-color;
+
+@mixin t-shadow-standart($a: 1px, $b: 1px, $c: 1px, $color: $default-color) {
+    text-shadow: $a $b $c $color;
+}
+@mixin button-border($left, $rotate) {
+    border: 5px groove $additional-color;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: calc(50% - 25px);
+    left: $left;
+    z-index: 999;
+    transform: rotate($rotate);
+    border-right: none;
+    border-top: none;
+    cursor:pointer;
 }

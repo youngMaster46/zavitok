@@ -372,3 +372,55 @@
 
     }
 }
+
+.gallery {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    overflow: hidden;
+
+    &__wrapper {
+        display: flex;
+        height: 668px;
+        width: 400%;
+    }
+
+    &__elem {
+        position: relative;
+        display: flex;
+        flex: 1 1 0px; // flex-basis: 0; //flex-basis: 100%;
+    }
+
+    &__image {
+        width: 100%;
+
+    }
+
+    &__block {
+        position: absolute;
+        bottom: 10%;
+        width: 80%;
+        padding: 0 10%;
+    }
+
+    &__heading {
+        color: $page-color;
+        font-size: 3rem;
+        @include t-shadow-standart();
+    }
+
+    &__description {
+        font-size: 1.2rem;
+        color: $additional-color;
+        margin-top: 1rem;
+        @include t-shadow-standart();
+
+    }
+}
+
+.arrowLeft {
+    @include button-border(10%, 45deg);
+}
+.arrowRight {
+    @include button-border(90%, 225deg);
+}

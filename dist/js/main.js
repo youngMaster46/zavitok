@@ -3553,6 +3553,18 @@ eval("__webpack_require__(/*! ../modules/web.timers */ \"./node_modules/core-js/
 
 /***/ }),
 
+/***/ "./src/js/gallery.js":
+/*!***************************!*\
+  !*** ./src/js/gallery.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Gallery = /*#__PURE__*/function () {\n  function Gallery(galleryName) {\n    _classCallCheck(this, Gallery);\n\n    this.childrensElemsArray; // get parent\n\n    this.parentWrapper = document.getElementsByClassName(galleryName)[0]; // get array of children\n\n    this.childrensElems = document.getElementsByClassName(galleryName)[0].childNodes;\n\n    this._transformElems();\n\n    this._moveGallery();\n  }\n\n  _createClass(Gallery, [{\n    key: \"_moveGallery\",\n    value: function _moveGallery() {\n      var _this = this;\n\n      setInterval(function () {\n        _this.moveRight();\n      }, 5000);\n    }\n  }, {\n    key: \"_transformElems\",\n    value: function _transformElems() {\n      // mutable\n      this.childrensElems.forEach(function (e) {\n        return e.className !== 'gallery__elem' ? e.remove() : '';\n      });\n      this.childrensElemsArray = Array.from(this.childrensElems);\n    }\n  }, {\n    key: \"moveLeft\",\n    value: function moveLeft() {\n      var firstElem = this.childrensElemsArray.shift();\n      this.childrensElemsArray.push(firstElem);\n      this.insertDOM();\n    }\n  }, {\n    key: \"insertDOM\",\n    value: function insertDOM() {\n      this.parentWrapper.innerHTML = '';\n\n      for (var i = 0; i < this.childrensElemsArray.length; i++) {\n        this.parentWrapper.insertAdjacentElement('beforeend', this.childrensElemsArray[i]);\n      }\n    }\n  }, {\n    key: \"moveRight\",\n    value: function moveRight() {\n      var lastElem = this.childrensElemsArray.pop();\n      this.childrensElemsArray.unshift(lastElem);\n      this.insertDOM();\n    }\n  }]);\n\n  return Gallery;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Gallery);\n\n//# sourceURL=webpack:///./src/js/gallery.js?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -3561,19 +3573,7 @@ eval("__webpack_require__(/*! ../modules/web.timers */ \"./node_modules/core-js/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/style.scss */ \"./src/sass/style.scss\");\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n\n\n\nvar a = function a(varing) {\n  return \"hello \".concat(varing);\n};\n\na('MMMMMMMMMMMMMMMMAAAAAAAAAAAACXXXXXXXXXXX');\nconsole.log(\"i imported \".concat(_test__WEBPACK_IMPORTED_MODULE_1__[\"default\"], \" from another modules!\"));\n\n//# sourceURL=webpack:///./src/js/index.js?");
-
-/***/ }),
-
-/***/ "./src/js/test.js":
-/*!************************!*\
-  !*** ./src/js/test.js ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconsole.log('test file js');\n/* harmony default export */ __webpack_exports__[\"default\"] = ('THIS IS dyadya BAGDA');\n\n//# sourceURL=webpack:///./src/js/test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/style.scss */ \"./src/sass/style.scss\");\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _gallery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gallery */ \"./src/js/gallery.js\");\n\n\n\nfunction getFirstClassName(elem) {\n  return document.getElementsByClassName(elem)[0];\n}\n\nvar bagda = new _gallery__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('gallery__wrapper');\nvar leftBut = getFirstClassName('arrowLeft');\nvar rightBut = getFirstClassName('arrowRight');\nleftBut.addEventListener('click', function () {\n  bagda.moveLeft();\n});\nrightBut.addEventListener('click', function () {\n  bagda.moveRight();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
