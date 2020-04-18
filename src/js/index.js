@@ -1,14 +1,14 @@
 import '../sass/style.scss'
 import Gallery from './gallery'
+import {
+    getFirstClassName
+} from './helpers'
 
-function getFirstClassName(elem) {
-    return document.getElementsByClassName(elem)[0]
-}
-
+console.log(answer)
 const bagda = new Gallery('gallery__wrapper')
 
-const leftBut = getFirstClassName('arrowLeft')
-const rightBut = getFirstClassName('arrowRight')
+const leftBut = getFirstClassName('gallery__arrowLeft')
+const rightBut = getFirstClassName('gallery__arrowRight')
 
 leftBut.addEventListener('click', () => {
     bagda.moveLeft()
@@ -16,7 +16,3 @@ leftBut.addEventListener('click', () => {
 rightBut.addEventListener('click', () => {
     bagda.moveRight();
 })
-
-
-
-

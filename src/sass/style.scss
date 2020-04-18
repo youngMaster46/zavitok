@@ -250,7 +250,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background: url(../img/anvil.jpg);
+    background: url('../img/anvil.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -263,12 +263,14 @@
             font-size: 2rem;
             padding-bottom: 30px;
             margin-top: 2rem;
+            @include big-shadow();
         }
 
         &__text {
             color: $additional-color;
             font-size: 1.3rem;
             line-height: 2rem;
+            @include small-shadow();
         }
     }
 
@@ -286,7 +288,7 @@
             padding: 3rem 2rem;
             margin: 20px;
             background-color: $four-color;
-            color: white;
+            color: $page-color;
             font-family: 'Poppins', sans-serif;
         }
 
@@ -344,7 +346,7 @@
     }
 
     &__description {
-        color: black;
+        color: $default-color;
         margin-top: 2rem;
 
         span {
@@ -376,8 +378,9 @@
 .gallery {
     position: relative;
     font-family: "Poppins", sans-serif;
-    width: 100%;
+    width: 90%;
     overflow: hidden;
+    margin: 0 auto;
 
     &__wrapper {
         display: flex;
@@ -406,21 +409,101 @@
     &__heading {
         color: $page-color;
         font-size: 3rem;
-        @include t-shadow-standart();
+        @include big-shadow();
+
     }
 
     &__description {
         font-size: 1.2rem;
-        color: $additional-color;
+        color: $page-color;
         margin-top: 1rem;
-        @include t-shadow-standart();
+        @include small-shadow();
 
+    }
+
+    &__arrowLeft {
+        @include button-border(10%, 45deg);
+    }
+
+    &__arrowRight {
+        @include button-border(90%, 225deg);
     }
 }
 
-.arrowLeft {
-    @include button-border(10%, 45deg);
-}
-.arrowRight {
-    @include button-border(90%, 225deg);
+.contact-us {
+    color: $page-color;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    @include line-gradient(45deg, $four-color, $contact-color 2px, 135deg, $four-color, $contact-color 2px);
+
+    &__heading {
+        font-size: 2rem;
+    }
+
+
+
+    &__wrapper {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 40%;
+
+    }
+
+    &__address {
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__contact-form {
+        flex-basis: 40%;
+
+    }
+
+    &__form {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        @include form-ui();
+    }
+
+    &__textarea {
+        @include form-ui();
+        padding: 2rem 1rem;
+    }
+
+    &__button {
+        @include form-ui();
+        background-color: $additional-color;
+        color: $default-color;
+        border: none;
+
+        &:hover {
+            color: $additional-color;
+            background-color: $default-color;
+        }
+    }
+
+    &__link {
+        @extend .link;
+        color: $additional-color;
+
+
+        &:hover {
+            border-bottom: 2px dashed $page-color;
+        }
+    }
+
+    &__telephone {
+        margin: 1rem 0;
+    }
 }

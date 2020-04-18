@@ -47,7 +47,7 @@
       color: #fc9f4e;
       font-size: 1.2rem; }
 
-.link {
+.link, .contact-us__link {
   text-decoration: none;
   color: white; }
 
@@ -180,7 +180,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: url(/dist/img/anvil.jpg);
+  background: url(./../img/anvil.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
   .main-description {
@@ -190,11 +190,13 @@
       color: white;
       font-size: 2rem;
       padding-bottom: 30px;
-      margin-top: 2rem; }
+      margin-top: 2rem;
+      text-shadow: 2px 2px 0 black; }
     .main-description__text {
       color: #fc9f4e;
       font-size: 1.3rem;
-      line-height: 2rem; }
+      line-height: 2rem;
+      text-shadow: 1px 1px 0px black, 8px 0px 10px #ccc; }
   .main-list {
     display: flex;
     flex-flow: row wrap;
@@ -265,8 +267,9 @@
 .gallery {
   position: relative;
   font-family: "Poppins", sans-serif;
-  width: 100%;
-  overflow: hidden; }
+  width: 90%;
+  overflow: hidden;
+  margin: 0 auto; }
   .gallery__wrapper {
     display: flex;
     height: 668px;
@@ -285,36 +288,92 @@
   .gallery__heading {
     color: white;
     font-size: 3rem;
-    text-shadow: 1px 1px 1px black; }
+    text-shadow: 2px 2px 0 black; }
   .gallery__description {
     font-size: 1.2rem;
-    color: #fc9f4e;
+    color: white;
     margin-top: 1rem;
-    text-shadow: 1px 1px 1px black; }
+    text-shadow: 1px 1px 0px black, 8px 0px 10px #ccc; }
+  .gallery__arrowLeft {
+    border: 5px groove #fc9f4e;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: calc(50% - 25px);
+    left: 10%;
+    z-index: 999;
+    transform: rotate(45deg);
+    border-right: none;
+    border-top: none;
+    cursor: pointer; }
+  .gallery__arrowRight {
+    border: 5px groove #fc9f4e;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: calc(50% - 25px);
+    left: 90%;
+    z-index: 999;
+    transform: rotate(225deg);
+    border-right: none;
+    border-top: none;
+    cursor: pointer; }
 
-.arrowLeft {
-  border: 5px groove #fc9f4e;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: calc(50% - 25px);
-  left: 10%;
-  z-index: 999;
-  transform: rotate(45deg);
-  border-right: none;
-  border-top: none;
-  cursor: pointer; }
-
-.arrowRight {
-  border: 5px groove #fc9f4e;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: calc(50% - 25px);
-  left: 90%;
-  z-index: 999;
-  transform: rotate(225deg);
-  border-right: none;
-  border-top: none;
-  cursor: pointer; }
+.contact-us {
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-image: repeating-linear-gradient(45deg, #23263a, transparent 2px, #303030 2px), repeating-linear-gradient(135deg, #23263a, #303030 2px); }
+  .contact-us__heading {
+    font-size: 2rem; }
+  .contact-us__wrapper {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%; }
+  .contact-us__address {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column; }
+  .contact-us__contact-form {
+    flex-basis: 40%; }
+  .contact-us__form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; }
+  .contact-us__input {
+    line-height: 1rem;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem 0; }
+  .contact-us__textarea {
+    line-height: 1rem;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem 0;
+    padding: 2rem 1rem; }
+  .contact-us__button {
+    line-height: 1rem;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem 0;
+    background-color: #fc9f4e;
+    color: black;
+    border: none; }
+    .contact-us__button:hover {
+      color: #fc9f4e;
+      background-color: black; }
+  .contact-us__link {
+    color: #fc9f4e; }
+    .contact-us__link:hover {
+      border-bottom: 2px dashed white; }
+  .contact-us__telephone {
+    margin: 1rem 0; }
 

@@ -19,6 +19,7 @@
 @mixin t-shadow-standart($a: 1px, $b: 1px, $c: 1px, $color: $default-color) {
     text-shadow: $a $b $c $color;
 }
+
 @mixin button-border($left, $rotate) {
     border: 5px groove $additional-color;
     position: absolute;
@@ -30,5 +31,22 @@
     transform: rotate($rotate);
     border-right: none;
     border-top: none;
-    cursor:pointer;
+    cursor: pointer;
+}
+
+@mixin big-shadow() {
+    text-shadow: 2px 2px 0 black;
+}
+
+@mixin small-shadow() {
+    text-shadow: 1px 1px 0px black, 8px 0px 10px #ccc;
+}
+
+@mixin form-ui {
+    line-height: 1rem;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem 0;
+
 }

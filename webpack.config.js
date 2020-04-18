@@ -1,14 +1,16 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: ['@babel/polyfill', './src/js/index.js'],
     output: {
         path: path.resolve(__dirname + '/dist'),
-        filename: 'js/[name].js'
+        filename: 'js/[name].js',
+        publicPath: './'
     },
+
     devServer: {
         contentBase: './dist'
     },
@@ -17,12 +19,15 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html'
         }),
-        new HtmlWebpackPlugin({
-            filename: 'prepare.html'
-        }),
+
         new MiniCssExtractPlugin({
             filename: '/css/[name].css',
-        })
+        }),
+        // just copying files 
+        new CopyPlugin([{
+            from: path.resolve(__dirname + '/src/img'),
+            to: path.resolve(__dirname + '/dist/img')
+        }])
     ],
     module: {
         rules: [{
@@ -50,8 +55,7 @@ module.exports = {
                 use: [{
                         loader: "file-loader",
                         options: {
-                            name: '[name].[ext]',
-                            outputPath: '/dist/img',
+                            name: '../img/[name].[ext]',
 
                         }
                     }

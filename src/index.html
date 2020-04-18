@@ -28,43 +28,45 @@
     </header>
     <main>
         <section class="gallery">
-            <div class="arrowLeft"></div>
+            <div class="gallery__arrowLeft"></div>
             <div class='gallery__wrapper'>
                 <figure class='gallery__elem'>
-                    <img class='gallery__image' src='img/fence.jpg'>
+                    <img class='gallery__image' src='img/railing-gold-one.jpg'>
                     <figcaption class='gallery__block'>
                         <h1 class='gallery__heading'>Завиток - лучшая художественная ковка в Курске</h1>
-                        <p class='gallery__description'>Элемент 1
-                            кузнечных станков
+                        <p class='gallery__description'>Наши работы очень стильные, композитные и надежные одновременно
                         </p>
                     </figcaption>
                 </figure>
                 <figure class='gallery__elem'>
-                    <img class='gallery__image' src='img/anvil.jpg'>
+                    <img class='gallery__image' src='img/porch.jpg'>
                     <figcaption class='gallery__block'>
-                        <h1 class='gallery__heading'>Завиток - лучшая художественная ковка в Курске</h1>
-                        <p class='gallery__description'>Элемент 2
+                        <h1 class='gallery__heading'>Завиток - работают профессионалы</h1>
+                        <p class='gallery__description'>Любой кованый элемент под ключ
                         </p>
                     </figcaption>
                 </figure>
                 <figure class='gallery__elem'>
-                    <img class='gallery__image' src='img/chimney.jpg'>
+                    <img class='gallery__image' src='img/railling-forging.jpg'>
                     <figcaption class='gallery__block'>
-                        <h1 class='gallery__heading'>Завиток - лучшая художественная ковка в Курске</h1>
-                        <p class='gallery__description'>Элемент 3
+                        <h1 class='gallery__heading'>Подбираем и создаем эскизы ковки специально для вас</h1>
+                        <p class='gallery__description'>Поможем и подскажем из какого металла как и почему, учитывая все
+                            плюсы и минусы
                         </p>
                     </figcaption>
                 </figure>
                 <figure class='gallery__elem'>
                     <img class='gallery__image' src='img/canopy.jpg'>
                     <figcaption class='gallery__block'>
-                        <h1 class='gallery__heading'>Завиток - лучшая художественная ковка в Курске</h1>
-                        <p class='gallery__description'>Элемент 4
+                        <h1 class='gallery__heading'>Горячая покраска изделия в подарок</h1>
+                        <p class='gallery__description'>Вы заказываете, мы приезжаем, замеряем, договариваемся и делаем
+                            "под ключ "
                         </p>
                     </figcaption>
                 </figure>
             </div>
-            <div class="arrowRight"></div>
+            <div class="gallery__arrowRight"></div>
+            <div class="gallery__translateBlock"></div>
         </section>
 
         <section class="forging">
@@ -180,9 +182,9 @@
                     </a>
                 </figure>
                 <figure class='latest-work__job'>
-                    <a href='#' class='link latest-work__link'><img src="img/chimney.jpg" alt="Кованая решетка"
+                    <a href='#' class='link latest-work__link'><img src="img/railing-big.jpg" alt="Кованая решетка"
                             class='latest-work__image'>
-                        <figcaption class='latest-work__description'><span>Кованый дымоход на трубу</span></figcaption>
+                        <figcaption class='latest-work__description'><span>Роскошные перила</span></figcaption>
                     </a>
                 </figure>
                 <figure class='latest-work__job'>
@@ -200,7 +202,35 @@
             </div>
 
         </section>
+        <section class="contact-us">
+            <div class="contact-us__address">
+                <h2 class="contact-us__heading">Адрес</h2>
+                <div class='contact-us__wrapper'>
+                    <p class="contact-us__text"><a href='https://goo.gl/maps/MBk4eVJX2KWRDvHx7'
+                            class='contact-us__link'>Россия, Курск, ул.Кольцевая д.114</a></p>
+                    <span class="contact-us__telephone">Телефон <a class='contact-us__link'
+                            href='tel:89045229481'>8-904-522-94-81</a></span>
+                    <span class="contact-us__telephone">Доп.телефон <a class='contact-us__link'
+                            href='tel:89510774645'>8-951-077-46-45</a></span>
+                    <div class="contact-us__vk">Адрес <a class='contact-us__link'
+                            href='https://vk.com/club77452055'>ВКонтакте</a></div>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2475.318747402822!2d36.10049221592909!3d51.654000207794475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412f1d2751bc11d1%3A0xf303164d78435903!2z0JfQsNCy0LjRgtC-0Lo!5e0!3m2!1sru!2sru!4v1587201774448!5m2!1sru!2sru"
+                    width="100%" height="197" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+            <div class="contact-us__contact-form">
+                <h2 class="contact-us__heading">Форма для связи</h2>
+                <form action="" class='contact-us__form' name='my-form'>
+                    <input name='name' type="text" class="contact-us__input" placeholder="Имя*">
+                    <input name='tel' type="text" class="contact-us__input" placeholder="Номер*">
+                    <textarea name='text' class='contact-us__textarea'  placeholder="Сообщение"></textarea>
+                    <button class='contact-us__button'>Отправить</button>
+                </form>
+            </div>
 
+        </section>
     </main>
 
     <footer class="footer">
