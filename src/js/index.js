@@ -3,7 +3,7 @@ import Gallery from './gallery'
 import {
     getFirstClassName
 } from './helpers'
-
+import * as f from './form'
 console.log(answer)
 const bagda = new Gallery('gallery__wrapper')
 
