@@ -29,13 +29,13 @@ form.addEventListener('submit', (e) => {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 //answer
                 alert('200')
-                getFirstClassName('contact-us__heading', 1).textContent = xhr.response;
+                getFirstClassName('contact-us__heading', 1).innerHTML = xhr.response;
                 name.value = '';
                 tel.value = '';
                 text.value = '';
             }
         }
-        xhr.send(`Клиент по имени '${name.value}' просит связаться по телефону '${tel.value}' и говорит '${text.value}'.`)
+        xhr.send(`name=${name.value}&tel=${tel.value}&text=${text.value}`)
     }
 })
 export default answer

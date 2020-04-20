@@ -3,8 +3,9 @@ import Gallery from './gallery'
 import {
     getFirstClassName
 } from './helpers'
-import * as f from './form'
+import answer from './form'
 console.log(answer)
+
 const bagda = new Gallery('gallery__wrapper')
 
 const leftBut = getFirstClassName('gallery__arrowLeft')
