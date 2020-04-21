@@ -28,10 +28,7 @@ module.exports = {
             from: path.resolve(__dirname + '/src/img'),
             to: path.resolve(__dirname + '/dist/img')
         }]),
-        new CopyPlugin([{
-            from: path.resolve(__dirname + '/src/request.php'),
-            to: path.resolve(__dirname + '/dist/request.php')
-        }])
+   
     ],
     module: {
         rules: [{
