@@ -5,14 +5,33 @@
 
 @mixin zavitok {
     color: $page-color;
+    margin-left: 1rem;
 
     &__heading {
-        font-size: 3rem;
+        font-size: 1.6rem;
+
+        @media (min-width: 768px) {
+            font-size: 2.3rem
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 3rem;
+        }
+
     }
 
     &__text {
         color: $additional-color;
         font-size: 1.2rem;
+        line-height: 1rem;
+
+        @media (min-width: 768px) {
+            font-size: 1.3rem
+        }
+
+        @media (min-width: 1440px) {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -23,8 +42,8 @@
 @mixin button-border($left, $rotate) {
     border: 5px groove $additional-color;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     top: calc(50% - 25px);
     left: $left;
     z-index: 999;
@@ -32,6 +51,11 @@
     border-right: none;
     border-top: none;
     cursor: pointer;
+
+    @media (min-width: 1024px) {
+        width: 50px;
+        height: 50px
+    }
 }
 
 @mixin big-shadow() {
@@ -49,4 +73,20 @@
     font-family: 'Poppins', sans-serif;
     margin: 1rem 0;
 
+}
+
+@mixin menu-image() {
+    content: '';
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    left: -36px;
+    top: -10px;
+
+
+    @media (min-width: 1024px) {
+        top: -5px;
+        left: -44px;
+
+    }
 }

@@ -1,12 +1,16 @@
 @import "_var";
 @import "_mixins";
-@import "_templates";
 
 * {
     padding: 0;
     margin: 0;
     font-size: 16px;
     box-sizing: border-box;
+
+    @media (min-width: 1024px) {
+
+        font-size: 19px
+    }
 }
 
 .container {
@@ -22,6 +26,18 @@
     justify-content: space-around;
     align-items: center;
 
+    &__link {
+        font-size: .7rem;
+        position: relative;
+        text-align: left;
+
+        @media (min-width: 768px) {
+            font-size: 1rem
+        }
+
+
+    }
+
     &-navigation {
         order: 1;
         color: $page-color;
@@ -29,23 +45,64 @@
         &__list {
             display: flex;
             justify-content: space-between;
+            flex-direction: column;
             transition: .5s;
+            margin-left: 1rem;
 
+            @media (min-width: 1024px) {
+                flex-direction: row;
+                margin-right: 2rem;
+            }
 
         }
 
         &__item {
             list-style-type: none;
-            padding: 15px 45px;
+            padding: 1rem 1.5rem;
             text-transform: uppercase;
             cursor: pointer;
             border: 1px solid $page-color;
             transition: .5s;
             opacity: .8;
+            text-indent: 12px;
+            position: relative;
+
+            &:hover .header__link {
+                color: $additional-color;
+                //filter: grayscale(50%);
+            }
+
+
+            @media (min-width: 1024px) {
+                padding: 1rem 2rem;
+                width: 23%;
+                font-size: 1rem;
+                margin-left: .5rem;
+            }
+
+            &:nth-child(1)>a:before {
+                @include menu-image();
+                background: url("/../img/home.png");
+            }
+
+            &:nth-child(2)>a:before {
+                @include menu-image();
+                background: url("/../img/link.png");
+            }
+
+            &:nth-child(3)>a:before {
+                @include menu-image();
+                background: url("/../img/search.png");
+            }
+
+            &:nth-child(4)>a:before {
+                @include menu-image();
+                background: url("/../img/settings.png");
+            }
 
             &:hover {
                 opacity: 1;
-                transform: translateY(10px);
+                transform: translateX(-10px);
                 background-color: $default-color;
             }
 
@@ -62,6 +119,10 @@
 
     .zavitok-logo {
         @include zavitok;
+
+        @media (min-width: 1024px) {
+            margin-left: 2rem;
+        }
     }
 }
 
@@ -71,22 +132,29 @@
 }
 
 .forging {
+    padding-bottom: 2rem;
+    flex-direction: column;
     display: flex;
     min-height: 300px;
     @include line-gradient(45deg, rgba(0, 0, 0, .7), $first-linear-color 2px, 135deg, rgba(0, 0, 0, .7), $first-linear-color 2px);
 
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        padding-bottom: 3rem;
+    }
+
     &-about-us {
-        color: $page-color;
-        padding: 80px 60px;
+        color: #fff;
+        padding: 3rem 2rem 0 2rem;
         text-align: center;
         display: flex;
         flex-direction: column;
         @include t-shadow-standart();
 
-        h3 {
+        &__heading {
             color: $page-color;
             font-size: 2rem;
-            padding-bottom: 30px;
+            padding-bottom: 2rem;
         }
 
         &__description {
@@ -130,13 +198,19 @@
         }
 
         &__link {
-            font-size: 1.3rem;
+            font-size: 1rem;
             margin-top: 50px;
             cursor: pointer;
             border-bottom: 1px dashed $page-color;
             display: inline-block;
             align-self: center;
             color: $paragraph-color;
+
+            @media (min-width: 1024px) {
+                .forging-about-us__link {
+                    font-size: 1.3rem
+                }
+            }
 
             &:hover {
                 color: $page-color;
@@ -170,8 +244,12 @@
             display: flex;
             justify-content: space-around;
             transition: .5s;
-            margin-top: 4rem;
+            margin-top: 2rem;
+            flex-direction: column;
 
+            @media (min-width: 1024px) {
+                flex-direction: row;
+            }
         }
 
         &__item {
@@ -214,6 +292,7 @@
 
     .zavitok-logo {
         @include zavitok;
+
     }
 
     &__group {
@@ -256,14 +335,20 @@
 
     &-description {
         text-align: center;
-        margin-top: 5rem;
+        margin-top: 2rem;
 
         &__heading {
             color: $page-color;
-            font-size: 2rem;
-            padding-bottom: 30px;
-            margin-top: 2rem;
+            font-size: 1.6rem;
+            padding-bottom: 1rem;
+            margin-top: 1rem;
             @include big-shadow();
+
+            @media (min-width: 1024px) {
+                font-size: 2rem;
+                padding-bottom: 30px;
+                margin-top: 2rem;
+            }
         }
 
         &__text {
@@ -271,6 +356,10 @@
             font-size: 1.3rem;
             line-height: 2rem;
             @include small-shadow();
+
+            @media (min-width: 1024px) {
+                font-size: 1.6rem;
+            }
         }
     }
 
@@ -278,18 +367,32 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        margin-top: 3rem;
-        margin-bottom: 5rem;
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+
+        @media (min-width: 1024px) {
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+            flex-flow: row wrap;
+        }
 
         &__item {
-            width: 25%;
+            width: 90%;
             display: flex;
             flex-direction: column;
             padding: 3rem 2rem;
-            margin: 20px;
-            background-color: $four-color;
-            color: $page-color;
+            margin: 0 auto 1rem auto;
+            background-color: #23263a;
+            color: #fff;
             font-family: 'Poppins', sans-serif;
+
+            @media (min-width: 1024px) {
+                width: 40%;
+            }
+
+            @media (min-width: 1440px) {
+                width: 30%;
+            }
         }
 
         &__heading {
@@ -329,20 +432,34 @@
 
 
     &__heading {
-        font-size: 2rem;
-        margin: 5rem 0;
+        font-size: 1.6rem;
+        margin: 2rem 0;
+
+        @media (min-width: 1024px) {
+            margin: 3rem 0;
+            font-size: 2rem
+        }
     }
 
     &__jobs {
         display: flex;
-        flex-flow: row wrap;
+        flex-direction: column;
         justify-content: center;
+
+        @media (min-width: 1024px) {
+            flex-flow: row wrap;
+        }
     }
 
     &__job {
-        width: 20%;
-        margin: 0 1rem 3rem 1rem;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 2rem;
 
+        @media (min-width: 1024px) {
+            width: 40%;
+            margin: 0 1rem 3rem 1rem;
+        }
     }
 
     &__description {
@@ -378,13 +495,13 @@
 .gallery {
     position: relative;
     font-family: "Poppins", sans-serif;
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     margin: 0 auto;
 
     &__wrapper {
         display: flex;
-        height: 668px;
+        min-height: 300px;
         width: 400%;
     }
 
@@ -401,16 +518,30 @@
 
     &__block {
         position: absolute;
-        bottom: 10%;
-        width: 80%;
-        padding: 0 10%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding: 0 5%;
+        justify-content: space-between;
+        text-align: center;
+        padding: 2rem 0;
+
+        @media (min-width: 1024px) {
+            justify-content: flex-end;
+        }
     }
 
     &__heading {
         color: $page-color;
-        font-size: 3rem;
+        font-size: 1.6rem;
         @include big-shadow();
+        padding: 0rem 1rem;
 
+        @media (min-width: 1024px) {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
     }
 
     &__description {
@@ -418,6 +549,10 @@
         color: $page-color;
         margin-top: 1rem;
         @include small-shadow();
+
+        @media (min-width: 1024px) {
+            font-size: 2rem;
+        }
 
     }
 
@@ -431,17 +566,28 @@
 }
 
 .contact-us {
-    color: $page-color;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    color: #fff;
+    padding: 2rem 0;
     font-family: 'Poppins', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     @include line-gradient(45deg, $four-color, $contact-color 2px, 135deg, $four-color, $contact-color 2px);
 
+    @media (min-width: 1024px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
     &__heading {
-        font-size: 2rem;
+        font-size: 1.6rem;
+
+        @media (min-width: 1024px) {
+            font-size: 2rem;
+        }
     }
 
 
@@ -463,13 +609,21 @@
 
     &__contact-form {
         flex-basis: 40%;
+        margin-top: 2rem;
 
+        @media (min-width: 1024px) {
+            margin-top: 0rem;
+        }
     }
 
     &__form {
-        padding: 2rem;
+        padding: 1rem 1rem 0 1rem;
         display: flex;
         flex-direction: column;
+
+        @media (min-width: 1024px) {
+            padding: 2rem;
+        }
     }
 
     &__input {

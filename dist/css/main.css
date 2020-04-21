@@ -3,6 +3,9 @@
   margin: 0;
   font-size: 16px;
   box-sizing: border-box; }
+  @media (min-width: 1024px) {
+    * {
+      font-size: 19px; } }
 
 .container {
   max-width: 1440px;
@@ -15,24 +18,95 @@
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  .header__link {
+    font-size: .7rem;
+    position: relative;
+    text-align: left; }
+    @media (min-width: 768px) {
+      .header__link {
+        font-size: 1rem; } }
   .header-navigation {
     order: 1;
     color: white; }
     .header-navigation__list {
       display: flex;
       justify-content: space-between;
-      transition: .5s; }
+      flex-direction: column;
+      transition: .5s;
+      margin-left: 1rem; }
+      @media (min-width: 1024px) {
+        .header-navigation__list {
+          flex-direction: row;
+          margin-right: 2rem; } }
     .header-navigation__item {
       list-style-type: none;
-      padding: 15px 45px;
+      padding: 1rem 1.5rem;
       text-transform: uppercase;
       cursor: pointer;
       border: 1px solid white;
       transition: .5s;
-      opacity: .8; }
+      opacity: .8;
+      text-indent: 12px;
+      position: relative; }
+      .header-navigation__item:hover .header__link {
+        color: #fc9f4e; }
+      @media (min-width: 1024px) {
+        .header-navigation__item {
+          padding: 1rem 2rem;
+          width: 23%;
+          font-size: 1rem;
+          margin-left: .5rem; } }
+      .header-navigation__item:nth-child(1) > a:before {
+        content: '';
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        left: -36px;
+        top: -10px;
+        background: url("/../img/home.png"); }
+        @media (min-width: 1024px) {
+          .header-navigation__item:nth-child(1) > a:before {
+            top: -5px;
+            left: -44px; } }
+      .header-navigation__item:nth-child(2) > a:before {
+        content: '';
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        left: -36px;
+        top: -10px;
+        background: url("/../img/link.png"); }
+        @media (min-width: 1024px) {
+          .header-navigation__item:nth-child(2) > a:before {
+            top: -5px;
+            left: -44px; } }
+      .header-navigation__item:nth-child(3) > a:before {
+        content: '';
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        left: -36px;
+        top: -10px;
+        background: url("/../img/search.png"); }
+        @media (min-width: 1024px) {
+          .header-navigation__item:nth-child(3) > a:before {
+            top: -5px;
+            left: -44px; } }
+      .header-navigation__item:nth-child(4) > a:before {
+        content: '';
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        left: -36px;
+        top: -10px;
+        background: url("/../img/settings.png"); }
+        @media (min-width: 1024px) {
+          .header-navigation__item:nth-child(4) > a:before {
+            top: -5px;
+            left: -44px; } }
       .header-navigation__item:hover {
         opacity: 1;
-        transform: translateY(10px);
+        transform: translateX(-10px);
         background-color: black; }
       .header-navigation__item_active {
         opacity: 1;
@@ -40,32 +114,55 @@
         .header-navigation__item_active:hover {
           transform: translateY(0); }
   .header .zavitok-logo {
-    color: white; }
+    color: white;
+    margin-left: 1rem; }
     .header .zavitok-logo__heading {
-      font-size: 3rem; }
+      font-size: 1.6rem; }
+      @media (min-width: 768px) {
+        .header .zavitok-logo__heading {
+          font-size: 2.3rem; } }
+      @media (min-width: 1024px) {
+        .header .zavitok-logo__heading {
+          font-size: 3rem; } }
     .header .zavitok-logo__text {
       color: #fc9f4e;
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      line-height: 1rem; }
+      @media (min-width: 768px) {
+        .header .zavitok-logo__text {
+          font-size: 1.3rem; } }
+      @media (min-width: 1440px) {
+        .header .zavitok-logo__text {
+          font-size: 1.6rem; } }
+    @media (min-width: 1024px) {
+      .header .zavitok-logo {
+        margin-left: 2rem; } }
 
 .link, .contact-us__link {
   text-decoration: none;
   color: white; }
 
 .forging {
+  padding-bottom: 2rem;
+  flex-direction: column;
   display: flex;
   min-height: 300px;
   background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.7), transparent 2px, rgba(0, 0, 0, 0.8) 2px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) 2px); }
+  @media (min-width: 1024px) {
+    .forging {
+      flex-direction: row;
+      padding-bottom: 3rem; } }
   .forging-about-us {
-    color: white;
-    padding: 80px 60px;
+    color: #fff;
+    padding: 3rem 2rem 0 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     text-shadow: 1px 1px 1px black; }
-    .forging-about-us h3 {
+    .forging-about-us__heading {
       color: white;
       font-size: 2rem;
-      padding-bottom: 30px; }
+      padding-bottom: 2rem; }
     .forging-about-us__description {
       font-family: "Open Sans", sans-serif;
       line-height: 2rem;
@@ -99,13 +196,16 @@
         border-right: none;
         position: absolute; }
     .forging-about-us__link {
-      font-size: 1.3rem;
+      font-size: 1rem;
       margin-top: 50px;
       cursor: pointer;
       border-bottom: 1px dashed white;
       display: inline-block;
       align-self: center;
       color: #777777; }
+      @media (min-width: 1024px) {
+        .forging-about-us__link .forging-about-us__link {
+          font-size: 1.3rem; } }
       .forging-about-us__link:hover {
         color: white; }
 
@@ -128,7 +228,11 @@
     display: flex;
     justify-content: space-around;
     transition: .5s;
-    margin-top: 4rem; }
+    margin-top: 2rem;
+    flex-direction: column; }
+    @media (min-width: 1024px) {
+      .footer-navigation__list {
+        flex-direction: row; } }
   .footer-navigation__item {
     list-style-type: none;
     text-transform: uppercase;
@@ -150,12 +254,26 @@
   .footer__logo {
     order: -1; }
   .footer .zavitok-logo {
-    color: white; }
+    color: white;
+    margin-left: 1rem; }
     .footer .zavitok-logo__heading {
-      font-size: 3rem; }
+      font-size: 1.6rem; }
+      @media (min-width: 768px) {
+        .footer .zavitok-logo__heading {
+          font-size: 2.3rem; } }
+      @media (min-width: 1024px) {
+        .footer .zavitok-logo__heading {
+          font-size: 3rem; } }
     .footer .zavitok-logo__text {
       color: #fc9f4e;
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      line-height: 1rem; }
+      @media (min-width: 768px) {
+        .footer .zavitok-logo__text {
+          font-size: 1.3rem; } }
+      @media (min-width: 1440px) {
+        .footer .zavitok-logo__text {
+          font-size: 1.6rem; } }
   .footer__group {
     margin-top: 1rem;
     color: gray;
@@ -185,33 +303,52 @@
   background-size: cover; }
   .main-description {
     text-align: center;
-    margin-top: 5rem; }
+    margin-top: 2rem; }
     .main-description__heading {
       color: white;
-      font-size: 2rem;
-      padding-bottom: 30px;
-      margin-top: 2rem;
+      font-size: 1.6rem;
+      padding-bottom: 1rem;
+      margin-top: 1rem;
       text-shadow: 2px 2px 0 black; }
+      @media (min-width: 1024px) {
+        .main-description__heading {
+          font-size: 2rem;
+          padding-bottom: 30px;
+          margin-top: 2rem; } }
     .main-description__text {
       color: #fc9f4e;
       font-size: 1.3rem;
       line-height: 2rem;
       text-shadow: 1px 1px 0px black, 8px 0px 10px #ccc; }
+      @media (min-width: 1024px) {
+        .main-description__text {
+          font-size: 1.6rem; } }
   .main-list {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin-top: 3rem;
-    margin-bottom: 5rem; }
+    margin-top: 2rem;
+    margin-bottom: 2.5rem; }
+    @media (min-width: 1024px) {
+      .main-list {
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        flex-flow: row wrap; } }
     .main-list__item {
-      width: 25%;
+      width: 90%;
       display: flex;
       flex-direction: column;
       padding: 3rem 2rem;
-      margin: 20px;
+      margin: 0 auto 1rem auto;
       background-color: #23263a;
-      color: white;
+      color: #fff;
       font-family: 'Poppins', sans-serif; }
+      @media (min-width: 1024px) {
+        .main-list__item {
+          width: 40%; } }
+      @media (min-width: 1440px) {
+        .main-list__item {
+          width: 30%; } }
     .main-list__heading {
       font-size: 1.25rem;
       margin-top: 2rem; }
@@ -236,15 +373,27 @@
   padding-bottom: 3rem;
   background-image: repeating-linear-gradient(45deg, #23263a, transparent 2px, #141414 2px), repeating-linear-gradient(135deg, #23263a, #141414 2px); }
   .latest-work__heading {
-    font-size: 2rem;
-    margin: 5rem 0; }
+    font-size: 1.6rem;
+    margin: 2rem 0; }
+    @media (min-width: 1024px) {
+      .latest-work__heading {
+        margin: 3rem 0;
+        font-size: 2rem; } }
   .latest-work__jobs {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     justify-content: center; }
+    @media (min-width: 1024px) {
+      .latest-work__jobs {
+        flex-flow: row wrap; } }
   .latest-work__job {
-    width: 20%;
-    margin: 0 1rem 3rem 1rem; }
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem; }
+    @media (min-width: 1024px) {
+      .latest-work__job {
+        width: 40%;
+        margin: 0 1rem 3rem 1rem; } }
   .latest-work__description {
     color: black;
     margin-top: 2rem; }
@@ -267,12 +416,12 @@
 .gallery {
   position: relative;
   font-family: "Poppins", sans-serif;
-  width: 90%;
+  width: 100%;
   overflow: hidden;
   margin: 0 auto; }
   .gallery__wrapper {
     display: flex;
-    height: 668px;
+    min-height: 300px;
     width: 400%; }
   .gallery__elem {
     position: relative;
@@ -282,23 +431,39 @@
     width: 100%; }
   .gallery__block {
     position: absolute;
-    bottom: 10%;
-    width: 80%;
-    padding: 0 10%; }
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 0 5%;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2rem 0; }
+    @media (min-width: 1024px) {
+      .gallery__block {
+        justify-content: flex-end; } }
   .gallery__heading {
     color: white;
-    font-size: 3rem;
-    text-shadow: 2px 2px 0 black; }
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 0 black;
+    padding: 0rem 1rem; }
+    @media (min-width: 1024px) {
+      .gallery__heading {
+        font-size: 3rem;
+        margin-bottom: 2rem; } }
   .gallery__description {
     font-size: 1.2rem;
     color: white;
     margin-top: 1rem;
     text-shadow: 1px 1px 0px black, 8px 0px 10px #ccc; }
+    @media (min-width: 1024px) {
+      .gallery__description {
+        font-size: 2rem; } }
   .gallery__arrowLeft {
     border: 5px groove #fc9f4e;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     top: calc(50% - 25px);
     left: 10%;
     z-index: 999;
@@ -306,11 +471,15 @@
     border-right: none;
     border-top: none;
     cursor: pointer; }
+    @media (min-width: 1024px) {
+      .gallery__arrowLeft {
+        width: 50px;
+        height: 50px; } }
   .gallery__arrowRight {
     border: 5px groove #fc9f4e;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     top: calc(50% - 25px);
     left: 90%;
     z-index: 999;
@@ -318,18 +487,31 @@
     border-right: none;
     border-top: none;
     cursor: pointer; }
+    @media (min-width: 1024px) {
+      .gallery__arrowRight {
+        width: 50px;
+        height: 50px; } }
 
 .contact-us {
-  color: white;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  color: #fff;
+  padding: 2rem 0;
   font-family: 'Poppins', sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   background-image: repeating-linear-gradient(45deg, #23263a, transparent 2px, #303030 2px), repeating-linear-gradient(135deg, #23263a, #303030 2px); }
+  @media (min-width: 1024px) {
+    .contact-us {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      flex-direction: row;
+      justify-content: space-around; } }
   .contact-us__heading {
-    font-size: 2rem; }
+    font-size: 1.6rem; }
+    @media (min-width: 1024px) {
+      .contact-us__heading {
+        font-size: 2rem; } }
   .contact-us__wrapper {
     padding: 2rem;
     display: flex;
@@ -340,11 +522,18 @@
     display: flex;
     flex-direction: column; }
   .contact-us__contact-form {
-    flex-basis: 40%; }
+    flex-basis: 40%;
+    margin-top: 2rem; }
+    @media (min-width: 1024px) {
+      .contact-us__contact-form {
+        margin-top: 0rem; } }
   .contact-us__form {
-    padding: 2rem;
+    padding: 1rem 1rem 0 1rem;
     display: flex;
     flex-direction: column; }
+    @media (min-width: 1024px) {
+      .contact-us__form {
+        padding: 2rem; } }
   .contact-us__input {
     line-height: 1rem;
     padding: 1rem 1rem;
