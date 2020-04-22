@@ -449,7 +449,7 @@
     padding: 0rem 1rem; }
     @media (min-width: 1024px) {
       .gallery__heading {
-        font-size: 3rem;
+        font-size: 2rem;
         margin-bottom: 2rem; } }
   .gallery__description {
     font-size: 1.2rem;
@@ -565,4 +565,17 @@
       border-bottom: 2px dashed white; }
   .contact-us__telephone {
     margin: 1rem 0; }
+
+.information {
+  font-family: 'Poppins', sans-serif;
+  background-image: repeating-linear-gradient(45deg, #23263a, transparent 2px, #141414 2px), repeating-linear-gradient(135deg, #23263a, #141414 2px); }
+  .information__heading {
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 0 black;
+    padding: 3rem 0; }
+    @media (min-width: 1024px) {
+      .information__heading {
+        font-size: 2rem; } }
 

@@ -15,19 +15,24 @@ module.exports = {
         contentBase: './dist'
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: './src/index.html'
-        }),
-
-        new MiniCssExtractPlugin({
-            filename: '/css/[name].css',
-        }),
         // just copying files 
         new CopyPlugin([{
             from: path.resolve(__dirname + '/src/img'),
             to: path.resolve(__dirname + '/dist/img')
         }]),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contacts.html',
+            template: './src/contacts.html'
+        }),
+
+        new MiniCssExtractPlugin({
+            filename: '/css/[name].css',
+        }),
+        
    
     ],
     module: {

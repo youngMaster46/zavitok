@@ -539,7 +539,7 @@
         padding: 0rem 1rem;
 
         @media (min-width: 1024px) {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 2rem;
         }
     }
@@ -659,5 +659,24 @@
 
     &__telephone {
         margin: 1rem 0;
+    }
+}
+
+.information {
+
+    font-family: 'Poppins', sans-serif;
+    @include line-gradient(45deg, $four-color, $second-linear-color 2px, 135deg, $four-color, $second-linear-color 2px);
+
+    &__heading {
+        text-align: center;
+        color: $page-color;
+        font-size: 1.6rem;
+        @include big-shadow();
+        padding: 3rem 0;
+
+        @media (min-width: 1024px) {
+            font-size: 2rem;
+            
+        }
     }
 }
