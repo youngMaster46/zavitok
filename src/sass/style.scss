@@ -688,8 +688,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: unset;
+    }
 
     &__heading {
         text-align: center;
@@ -698,9 +704,12 @@
         @include big-shadow();
         padding: 3rem 0;
 
+        @media (min-width: 768px) {
+            flex-basis: 100%;
+        }
+
         @media (min-width: 1024px) {
             font-size: 2rem;
-
         }
     }
 
@@ -750,12 +759,16 @@
         padding: 0 1rem;
         text-align: center;
 
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+
+
         &__heading {
             font-size: 1.3rem;
 
             @media (min-width: 1024px) {
                 font-size: 1.6rem;
-
             }
         }
 
@@ -779,14 +792,21 @@
 
         &__movie {
             margin-top: 1rem;
-            transform: rotate(45deg);
             overflow: hidden;
             margin-top: -1rem;
+            width: 100%;
 
-            & video {
-                transform: rotate(-45deg);
+            @media (min-width: 375px) {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            @media (min-width: 768px) {
+                margin: 0;
 
             }
+
+            & video {}
         }
     }
 }
@@ -799,6 +819,10 @@
         flex-wrap: wrap;
         padding: 1rem 0;
         justify-content: space-around;
+
+        @media (min-width: 768px) {
+            flex-wrap: nowrap;
+        }
     }
 
     &__story {
@@ -806,6 +830,7 @@
         position: relative;
         overflow: hidden;
         padding: 1rem 0;
+
     }
 
     &__image {
