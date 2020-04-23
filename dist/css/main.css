@@ -1,11 +1,49 @@
 * {
   padding: 0;
   margin: 0;
-  font-size: 16px;
   box-sizing: border-box; }
-  @media (min-width: 1024px) {
-    * {
-      font-size: 19px; } }
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 25px; } }
+
+.menu-btn {
+  width: 28px;
+  height: 28px;
+  position: fixed;
+  background: white;
+  top: 80px;
+  right: 20px;
+  z-index: 999;
+  border-radius: 50%;
+  overflow: hidden; }
+  .menu-btn span {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 8px);
+    background: black;
+    width: 18px;
+    height: 2px; }
+    .menu-btn span:before {
+      content: '';
+      top: -5px;
+      background: black;
+      width: 18px;
+      height: 2px;
+      position: absolute; }
+    .menu-btn span:after {
+      content: '';
+      top: 5px;
+      background: black;
+      width: 18px;
+      height: 2px;
+      position: absolute; }
+  .menu-btn_active span {
+    height: 0; }
+    .menu-btn_active span:before {
+      transform: rotate(45deg) translate(3px, 4px); }
+    .menu-btn_active span:after {
+      transform: rotate(-45deg) translate(3px, -4px); }
 
 .container {
   margin: 0 auto;
@@ -13,7 +51,7 @@
 
 .header {
   background-color: #272626;
-  min-height: 170px;
+  min-height: 70px;
   display: flex;
   justify-content: space-around;
   align-items: center; }
@@ -26,7 +64,8 @@
         font-size: 1rem; } }
   .header-navigation {
     order: 1;
-    color: white; }
+    color: white;
+    display: none; }
     .header-navigation__list {
       display: flex;
       justify-content: space-between;
@@ -221,35 +260,38 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1024px;
-    align-items: center; }
-  .footer-navigation__list {
-    display: flex;
-    justify-content: space-around;
-    transition: .5s;
-    margin-top: 2rem;
-    flex-direction: column; }
-    @media (min-width: 1024px) {
-      .footer-navigation__list {
-        flex-direction: row; } }
-  .footer-navigation__item {
-    list-style-type: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: .5s;
-    opacity: .8;
-    padding: 1rem 4rem; }
-    .footer-navigation__item:hover {
-      opacity: 1; }
-    .footer-navigation__item a:hover {
-      color: #fc9f4e; }
-    .footer-navigation__item_active {
-      opacity: 1;
-      color: #fc9f4e; }
-      .footer-navigation__item_active:hover {
-        transform: scale(1); }
-      .footer-navigation__item_active a {
+    align-items: center;
+    width: 100%; }
+  .footer-navigation {
+    width: 100%; }
+    .footer-navigation__list {
+      display: flex;
+      justify-content: space-around;
+      transition: .5s;
+      margin-top: 2rem;
+      flex-direction: column; }
+      @media (min-width: 1024px) {
+        .footer-navigation__list {
+          flex-direction: row;
+          justify-content: space-around; } }
+    .footer-navigation__item {
+      list-style-type: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .5s;
+      opacity: .8;
+      margin: 1rem 0; }
+      .footer-navigation__item:hover {
+        opacity: 1; }
+      .footer-navigation__item a:hover {
         color: #fc9f4e; }
+      .footer-navigation__item_active {
+        opacity: 1;
+        color: #fc9f4e; }
+        .footer-navigation__item_active:hover {
+          transform: scale(1); }
+        .footer-navigation__item_active a {
+          color: #fc9f4e; }
   .footer__logo {
     order: -1; }
   .footer .zavitok-logo {
@@ -385,6 +427,9 @@
     @media (min-width: 1024px) {
       .latest-work__jobs {
         flex-flow: row wrap; } }
+    @media (min-width: 1440px) {
+      .latest-work__jobs {
+        flex-flow: row nowrap; } }
   .latest-work__job {
     width: 90%;
     margin: 0 auto;
@@ -404,8 +449,7 @@
     overflow: hidden; }
   .latest-work__image {
     border-radius: 50%;
-    width: 16rem;
-    height: 16rem;
+    width: 100%;
     transition: .7s;
     opacity: .9; }
     .latest-work__image:hover {
@@ -421,7 +465,8 @@
   .gallery__wrapper {
     display: flex;
     min-height: 300px;
-    width: 400%; }
+    width: 400%;
+    max-height: 1200px; }
   .gallery__elem {
     position: relative;
     display: flex;
