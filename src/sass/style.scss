@@ -13,8 +13,11 @@
     }
 }
 
+
+
+
+
 .container {
-    max-width: 1440px;
     margin: 0 auto;
     font-family: "Georgia", sans-serif;
 }
@@ -806,6 +809,10 @@
 
             }
 
+            @media (min-width: 1440px) {
+                margin-top: 2rem;
+            }
+
             & video {}
         }
     }
@@ -813,6 +820,19 @@
 
 .more {
     text-align: center;
+
+    & .heading__smile {
+        @media (min-width: 1440px) {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
     &__info {
         display: flex;
@@ -866,9 +886,12 @@
             padding: 1rem 0;
             font-size: 1.3rem;
 
+            @media (min-width: 768px) {
+                background: unset;
+            }
+
             @media (min-width: 1024px) {
                 font-size: 1.6rem;
-
             }
         }
     }

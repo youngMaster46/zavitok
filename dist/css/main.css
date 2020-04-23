@@ -8,7 +8,6 @@
       font-size: 19px; } }
 
 .container {
-  max-width: 1440px;
   margin: 0 auto;
   font-family: "Georgia", sans-serif; }
 
@@ -668,9 +667,21 @@
       @media (min-width: 768px) {
         .about .history__movie {
           margin: 0; } }
+      @media (min-width: 1440px) {
+        .about .history__movie {
+          margin-top: 2rem; } }
 
 .more {
   text-align: center; }
+  @media (min-width: 1440px) {
+    .more .heading__smile {
+      width: 100%; } }
+  @media (min-width: 1440px) {
+    .more {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap; } }
   .more__info {
     display: flex;
     flex-wrap: wrap;
@@ -708,6 +719,9 @@
     background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem 0;
     font-size: 1.3rem; }
+    @media (min-width: 768px) {
+      .main-about > .contact-us .contact-us__heading {
+        background: unset; } }
     @media (min-width: 1024px) {
       .main-about > .contact-us .contact-us__heading {
         font-size: 1.6rem; } }
