@@ -20,6 +20,10 @@ module.exports = {
             from: path.resolve(__dirname + '/src/img'),
             to: path.resolve(__dirname + '/dist/img')
         }]),
+        new CopyPlugin([{
+            from: path.resolve(__dirname + '/src/video'),
+            to: path.resolve(__dirname + '/dist/video')
+        }]),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html'
@@ -27,6 +31,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'contacts.html',
             template: './src/contacts.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: './src/about.html'
         }),
 
         new MiniCssExtractPlugin({

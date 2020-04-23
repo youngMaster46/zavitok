@@ -676,7 +676,172 @@
 
         @media (min-width: 1024px) {
             font-size: 2rem;
-            
+
         }
     }
+}
+
+.about {
+    font-family: 'Poppins', sans-serif;
+    @include line-gradient(45deg, $four-color, $second-linear-color 2px, 135deg, $four-color, $second-linear-color 2px);
+    color: $page-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+
+    &__heading {
+        text-align: center;
+        color: $page-color;
+        font-size: 1.6rem;
+        @include big-shadow();
+        padding: 3rem 0;
+
+        @media (min-width: 1024px) {
+            font-size: 2rem;
+
+        }
+    }
+
+    & .advantages {
+        flex-basis: 30%;
+
+        &__heading {
+            font-size: 1.3rem;
+
+            @media (min-width: 1024px) {
+                font-size: 1.6rem;
+
+            }
+
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+        }
+
+        &__item {
+            line-height: 2.5rem;
+            display: inline-block;
+            position: relative;
+
+            &:before {
+                content: '';
+                width: 32px;
+                height: 32px;
+                background: url("/../img/ok.svg");
+                background-size: cover;
+                top: 5px;
+                left: -40px;
+                position: absolute;
+            }
+
+        }
+    }
+
+    & .history {
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        padding: 0 1rem;
+        text-align: center;
+
+        &__heading {
+            font-size: 1.3rem;
+
+            @media (min-width: 1024px) {
+                font-size: 1.6rem;
+
+            }
+        }
+
+        &__about {
+            margin-top: 2rem;
+            line-height: 1.1rem;
+
+            @media (min-width: 768px) {
+                line-height: 1.3rem;
+            }
+        }
+
+        &__text {
+            line-height: 1.6rem;
+
+        }
+
+        &__movie {
+            margin-top: 1rem;
+            transform: rotate(45deg);
+            overflow: hidden;
+            margin-top: -1rem;
+
+            & video {
+                transform: rotate(-45deg);
+
+            }
+        }
+    }
+}
+
+.more {
+    text-align: center;
+
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+        justify-content: space-around;
+    }
+
+    &__story {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        padding: 1rem 0;
+    }
+
+    &__image {
+        transition: .5s;
+        width: 100%;
+        &:hover {
+            transform: scale(2);
+            z-index: 999;
+        }
+    }
+
+    &__hint {
+        position: absolute;
+        padding: 1rem 0;
+        background: $paragraph-color;
+        background: rgba(0, 0, 0, .7);
+        text-transform: lowercase;
+        bottom: 0;
+    }
+}
+
+.main-about {
+    &>.contact-us {
+        background: url('/../img/home51.jpg');
+        background-size: cover;
+        background-position: 30% 0%;
+
+        & .contact-us__heading {
+            @include t-shadow-standart();
+            background-color: $first-linear-color;
+            padding: 1rem 0;
+            font-size: 1.3rem;
+
+            @media (min-width: 1024px) {
+                font-size: 1.6rem;
+
+            }
+        }
+    }
+
+
+
 }
