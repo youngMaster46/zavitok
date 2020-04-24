@@ -34,14 +34,14 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'about.html',
-            template: './src/about.html'
+            template: './src/about.html',
         }),
 
         new MiniCssExtractPlugin({
             filename: '/css/[name].css',
         }),
-        
-   
+
+
     ],
     module: {
         rules: [{

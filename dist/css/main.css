@@ -8,15 +8,18 @@
     font-size: 25px; } }
 
 .menu-btn {
-  width: 28px;
-  height: 28px;
+  width: 42px;
+  height: 42px;
   position: fixed;
   background: white;
-  top: 80px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   z-index: 999;
   border-radius: 50%;
   overflow: hidden; }
+  @media (min-width: 1024px) {
+    .menu-btn {
+      display: none; } }
   .menu-btn span {
     position: absolute;
     top: calc(50% - 1px);
@@ -30,19 +33,25 @@
       background: black;
       width: 18px;
       height: 2px;
-      position: absolute; }
+      position: absolute;
+      transition: .3s; }
     .menu-btn span:after {
       content: '';
       top: 5px;
       background: black;
       width: 18px;
       height: 2px;
-      position: absolute; }
+      position: absolute;
+      transition: .3s; }
   .menu-btn_active span {
     height: 0; }
     .menu-btn_active span:before {
+      left: -1px;
+      width: 20px;
       transform: rotate(45deg) translate(3px, 4px); }
     .menu-btn_active span:after {
+      left: -1px;
+      width: 20px;
       transform: rotate(-45deg) translate(3px, -4px); }
 
 .container {
@@ -53,8 +62,12 @@
   background-color: #272626;
   min-height: 70px;
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  padding: .5rem 1rem; }
+  @media (min-width: 1024px) {
+    .header {
+      justify-content: space-around;
+      padding: .5rem 0rem; } }
   .header__link {
     font-size: .7rem;
     position: relative;
@@ -65,17 +78,27 @@
   .header-navigation {
     order: 1;
     color: white;
-    display: none; }
+    opacity: 0;
+    position: fixed;
+    transition: .5s;
+    top: 0;
+    left: 0;
+    transform: translateX(-300px); }
+    @media (min-width: 1024px) {
+      .header-navigation {
+        opacity: 1;
+        position: relative;
+        transform: translateX(0); } }
     .header-navigation__list {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
       transition: .5s;
-      margin-left: 1rem; }
+      margin-left: .5rem; }
       @media (min-width: 1024px) {
         .header-navigation__list {
           flex-direction: row;
-          margin-right: 2rem; } }
+          margin-right: .5rem; } }
     .header-navigation__item {
       list-style-type: none;
       padding: 1rem 1.5rem;
@@ -151,30 +174,27 @@
         background-color: black; }
         .header-navigation__item_active:hover {
           transform: translateY(0); }
+  .header-navigation_active {
+    opacity: 1;
+    z-index: 99;
+    transform: translateX(0); }
   .header .zavitok-logo {
-    color: white;
-    margin-left: 1rem; }
+    color: white; }
     .header .zavitok-logo__heading {
-      font-size: 1.6rem; }
+      font-size: 1.3rem; }
       @media (min-width: 768px) {
         .header .zavitok-logo__heading {
-          font-size: 2.3rem; } }
+          font-size: 1.6rem; } }
       @media (min-width: 1024px) {
         .header .zavitok-logo__heading {
-          font-size: 3rem; } }
+          font-size: 2rem; } }
     .header .zavitok-logo__text {
       color: #fc9f4e;
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 1rem; }
-      @media (min-width: 768px) {
-        .header .zavitok-logo__text {
-          font-size: 1.3rem; } }
-      @media (min-width: 1440px) {
-        .header .zavitok-logo__text {
-          font-size: 1.6rem; } }
     @media (min-width: 1024px) {
       .header .zavitok-logo {
-        margin-left: 2rem; } }
+        margin-left: 1rem; } }
 
 .link, .contact-us__link {
   text-decoration: none;
@@ -295,26 +315,19 @@
   .footer__logo {
     order: -1; }
   .footer .zavitok-logo {
-    color: white;
-    margin-left: 1rem; }
+    color: white; }
     .footer .zavitok-logo__heading {
-      font-size: 1.6rem; }
+      font-size: 1.3rem; }
       @media (min-width: 768px) {
         .footer .zavitok-logo__heading {
-          font-size: 2.3rem; } }
+          font-size: 1.6rem; } }
       @media (min-width: 1024px) {
         .footer .zavitok-logo__heading {
-          font-size: 3rem; } }
+          font-size: 2rem; } }
     .footer .zavitok-logo__text {
       color: #fc9f4e;
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 1rem; }
-      @media (min-width: 768px) {
-        .footer .zavitok-logo__text {
-          font-size: 1.3rem; } }
-      @media (min-width: 1440px) {
-        .footer .zavitok-logo__text {
-          font-size: 1.6rem; } }
   .footer__group {
     margin-top: 1rem;
     color: gray;
@@ -488,21 +501,19 @@
         justify-content: flex-end; } }
   .gallery__heading {
     color: white;
-    font-size: 1.6rem;
-    text-shadow: 2px 2px 0 black;
-    padding: 0rem 1rem; }
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 0 black; }
     @media (min-width: 1024px) {
       .gallery__heading {
-        font-size: 2rem;
-        margin-bottom: 2rem; } }
+        font-size: 1.6rem;
+        margin-bottom: 1rem; } }
   .gallery__description {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
-    margin-top: 1rem;
     text-shadow: 1px 1px 0px black, 8px 0px 10px #ccc; }
     @media (min-width: 1024px) {
       .gallery__description {
-        font-size: 2rem; } }
+        font-size: 1.3rem; } }
   .gallery__arrowLeft {
     border: 5px groove #fc9f4e;
     position: absolute;
@@ -753,7 +764,8 @@
     background: rgba(0, 0, 0, 0.7);
     text-transform: lowercase;
     top: 1rem;
-    width: 100%; }
+    width: 100%;
+    letter-spacing: 2px; }
 
 .main-about > .contact-us {
   background: url("/../img/home51.jpg");

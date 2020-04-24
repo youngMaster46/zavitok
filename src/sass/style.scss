@@ -17,15 +17,19 @@ html {
 }
 
 .menu-btn {
-    width: 28px;
-    height: 28px;
+    width: 42px;
+    height: 42px;
     position: fixed;
     background: white;
-    top: 80px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     z-index: 999;
     border-radius: 50%;
     overflow: hidden;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
 
     & span {
         position: absolute;
@@ -42,6 +46,7 @@ html {
             width: 18px;
             height: 2px;
             position: absolute;
+            transition: .3s;
 
         }
 
@@ -52,6 +57,7 @@ html {
             width: 18px;
             height: 2px;
             position: absolute;
+            transition: .3s;
 
         }
     }
@@ -61,12 +67,14 @@ html {
             height: 0;
 
             &:before {
-
+                left: -1px;
+                width: 20px;
                 transform: rotate(45deg) translate(3px, 4px);
             }
 
             &:after {
-
+                left: -1px;
+                width: 20px;
                 transform: rotate(-45deg) translate(3px, -4px);
             }
         }
@@ -83,8 +91,14 @@ html {
     background-color: $header-background;
     min-height: 70px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    padding: .5rem 1rem;
+
+    @media (min-width: 1024px) {
+        justify-content: space-around;
+        padding: .5rem 0rem;
+
+    }
 
     &__link {
         font-size: .7rem;
@@ -94,25 +108,34 @@ html {
         @media (min-width: 768px) {
             font-size: 1rem
         }
-
-
     }
 
     &-navigation {
         order: 1;
         color: $page-color;
-        display: none; //меню
+        opacity: 0; //меню
+        position: fixed;
+        transition: .5s;
+        top: 0;
+        left: 0;
+        transform: translateX(-300px);
+
+        @media (min-width: 1024px) {
+            opacity: 1;
+            position: relative;
+            transform: translateX(0);
+        }
 
         &__list {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
             transition: .5s;
-            margin-left: 1rem;
+            margin-left: .5rem;
 
             @media (min-width: 1024px) {
                 flex-direction: row;
-                margin-right: 2rem;
+                margin-right: .5rem;
             }
 
         }
@@ -178,11 +201,17 @@ html {
         }
     }
 
+    &-navigation_active {
+        opacity: 1;
+        z-index: 99;
+        transform: translateX(0);
+    }
+
     .zavitok-logo {
         @include zavitok;
 
         @media (min-width: 1024px) {
-            margin-left: 2rem;
+            margin-left: 1rem;
         }
     }
 }
@@ -600,24 +629,23 @@ html {
 
     &__heading {
         color: $page-color;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         @include big-shadow();
-        padding: 0rem 1rem;
+
 
         @media (min-width: 1024px) {
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
         }
     }
 
     &__description {
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: $page-color;
-        margin-top: 1rem;
         @include small-shadow();
 
         @media (min-width: 1024px) {
-            font-size: 2rem;
+            font-size: 1.3rem;
         }
 
     }
@@ -934,6 +962,7 @@ html {
         text-transform: lowercase;
         top: 1rem;
         width: 100%;
+        letter-spacing: 2px;
     }
 }
 

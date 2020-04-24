@@ -6,14 +6,17 @@ import {
 import answer from './form'
 console.log(answer)
 
-const bagda = new Gallery('gallery__wrapper')
+const location = window.location.pathname
+if (location == '/' || location == '/index.html') {
+    const bagda = new Gallery('gallery__wrapper')
 
-const leftBut = getFirstClassName('gallery__arrowLeft')
-const rightBut = getFirstClassName('gallery__arrowRight')
+    const leftBut = getFirstClassName('gallery__arrowLeft')
+    const rightBut = getFirstClassName('gallery__arrowRight')
 
-leftBut.addEventListener('click', () => {
-    bagda.moveLeft()
-})
-rightBut.addEventListener('click', () => {
-    bagda.moveRight();
-})
+    leftBut.addEventListener('click', () => {
+        bagda.moveLeft()
+    })
+    rightBut.addEventListener('click', () => {
+        bagda.moveRight();
+    })
+}
