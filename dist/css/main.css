@@ -783,3 +783,6 @@
       .main-about > .contact-us .contact-us__heading {
         font-size: 1.6rem; } }
 
+.gallery-page .gallery__image {
+  width: 100%; }
+

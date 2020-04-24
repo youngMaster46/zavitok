@@ -7,16 +7,25 @@ import answer from './form'
 console.log(answer)
 
 const location = window.location.pathname
-if (location == '/' || location == '/index.html') {
+const mainPage = location == '/' || location == '/index.html'
+const galleryPage = location == '/gallery.html'
+if (mainPage || galleryPage) {
     const bagda = new Gallery('gallery__wrapper')
-
+    // set up auto slide on main page
+    if (mainPage) {
+        bagda.moveGallery(5000)
+    }
     const leftBut = getFirstClassName('gallery__arrowLeft')
     const rightBut = getFirstClassName('gallery__arrowRight')
 
+    // on user click auto slide will be stopped via this.stopGallery()
     leftBut.addEventListener('click', () => {
         bagda.moveLeft()
+        bagda.stopGallery()
     })
     rightBut.addEventListener('click', () => {
-        bagda.moveRight();
+        bagda.moveRight()
+        bagda.stopGallery()
+
     })
 }

@@ -11,16 +11,18 @@ class Gallery {
         // transform nodelist into array
         this._transformElems();
         // automatically moving gallery
-        this._moveGallery();
         // get hidden element (helper) for animation of gallery
         this.translateBlock = getFirstClassName('gallery__translateBlock');
-
+        this.interval = '';
 
     }
-    _moveGallery() {
-        setInterval(() => {
-            this.moveRight();
-        }, 5000)
+    moveGallery(ms) {
+        this.interval = setInterval(() => {
+            this.moveRight()
+        }, ms)
+    }
+    stopGallery() {
+        clearInterval(this.interval)
     }
     _transformElems() {
         // mutable
@@ -29,10 +31,10 @@ class Gallery {
 
     }
     moveLeft() {
-
         const firstElem = this.childrensElems.shift();
         this.childrensElems.push(firstElem);
         this.insertDOM();
+        debugger;
     }
     insertDOM() {
         this.parentWrapper.innerHTML = ''

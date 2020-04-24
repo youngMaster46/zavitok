@@ -987,7 +987,13 @@ html {
             }
         }
     }
+}
 
-
-
+// gallery.html page
+.gallery-page {
+    & .gallery {
+        &__image {
+            width: 100%;    
+        }
+    }
 }
