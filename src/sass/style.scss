@@ -612,7 +612,6 @@ html {
         padding: 0 5%;
         justify-content: space-between;
         text-align: center;
-        padding: 2rem 0;
 
         @media (min-width: 1024px) {
             justify-content: flex-end;
@@ -623,6 +622,7 @@ html {
         color: $page-color;
         font-size: 1.3rem;
         @include big-shadow();
+        @include back(rgba(255, 255, 255, .6));
 
 
         @media (min-width: 1024px) {
@@ -635,6 +635,7 @@ html {
         font-size: 1rem;
         color: $page-color;
         @include small-shadow();
+        @include back();
 
         @media (min-width: 1024px) {
             font-size: 1.3rem;
@@ -1020,7 +1021,6 @@ html {
                 width: 60%;
             }
 
-            padding: 2rem 0;
 
             @media (min-width: 1024px) {
                 justify-content: flex-end;

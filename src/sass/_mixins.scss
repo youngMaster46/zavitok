@@ -25,7 +25,7 @@
         line-height: 1rem;
 
 
-       
+
     }
 }
 
@@ -83,4 +83,8 @@
         left: -44px;
 
     }
+}
+
+@mixin back($rgba: rgba(0, 0, 0, .6)) {
+    background-color: $rgba
 }
