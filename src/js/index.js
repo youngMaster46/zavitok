@@ -12,13 +12,13 @@ const location = window.location.pathname
 const mainPage = location == '/' || location == '/index.html'
 const galleryPage = location == '/gallery.html'
 if (mainPage || galleryPage) {
-    const bagda = new Gallery('gallery__wrapper')
-    // set up auto slide on main page
     if (mainPage) {
+        const bagda = new Gallery('gallery__wrapper')
+        // set up auto slide on main page
         bagda.moveGallery(5000)
 
-        const leftBut = getFirstClassName('gallery__arrowLeft')
-        const rightBut = getFirstClassName('gallery__arrowRight')
+        const leftBut = getFirstClassName('gallery__arrowLeft', 0)
+        const rightBut = getFirstClassName('gallery__arrowRight', 0)
 
         // on user click auto slide will be stopped via this.stopGallery()
         leftBut.addEventListener('click', () => {
@@ -30,5 +30,25 @@ if (mainPage || galleryPage) {
             bagda.stopGallery()
 
         })
+    } else if (galleryPage) {
+
+        const leftButtons = document.getElementsByClassName('gallery__arrowLeft')
+        const rightButtons = document.getElementsByClassName('gallery__arrowRight')
+        for (let i = 0; i < leftButtons.length; i++) {
+            let gallery = new Gallery('gallery__wrapper', i)
+
+            let leftBut = leftButtons[i]
+            let rightBut = rightButtons[i]
+            leftBut.addEventListener('click', () => {
+                gallery.moveLeft()
+                gallery.stopGallery()
+            })
+            rightBut.addEventListener('click', () => {
+                gallery.moveRight()
+                gallery.stopGallery()
+
+            })
+        }
+
     }
 }

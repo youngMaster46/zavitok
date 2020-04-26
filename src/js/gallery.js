@@ -5,7 +5,7 @@ import {
 class Gallery {
     constructor(galleryName, whichGallery = 0) {
         // get parent
-        this.parentWrapper = getFirstClassName(galleryName);
+        this.parentWrapper = getFirstClassName(galleryName, whichGallery);
         // get array of children
         this.childrensElems = getFirstClassName(galleryName, whichGallery).childNodes;
         // transform nodelist into array

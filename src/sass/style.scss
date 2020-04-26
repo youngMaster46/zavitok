@@ -132,7 +132,6 @@ html {
             flex-direction: column;
             transition: .5s;
             margin-left: .5rem;
-
             @media (min-width: 1024px) {
                 flex-direction: row;
                 margin-right: .5rem;
@@ -146,7 +145,7 @@ html {
             text-transform: uppercase;
             cursor: pointer;
             border: 1px solid $page-color;
-            transition: .5s;
+            transition: .3s;
             opacity: .8;
             text-indent: 12px;
             position: relative;
@@ -655,7 +654,7 @@ html {
     }
 
     &__arrowRight {
-        @include button-border(90%, 225deg);
+        @include button-border(calc(90% - 25px), 225deg);
     }
 }
 
@@ -998,7 +997,7 @@ html {
     & .gallery {
         display: flex;
         flex-direction: column;
-        
+
 
         &__wrapper {
             width: 300%;
@@ -1007,21 +1006,36 @@ html {
             flex-direction: row;
             min-height: unset;
             max-height: unset;
+
             // gallery position is absolute, that's why ...
+            
 
         }
 
         &__elem {
             @include line-gradient(45deg, $four-color, $second-linear-color 2px, 135deg, $four-color, $second-linear-color 2px);
-
             display: flex;
-            width: auto;
             justify-content: center;
+
+          
         }
 
         &__image {
-            width: auto;
-            height: auto;
+            @media (min-width: 1025px) {
+                width: 60%;
+            }
+        }
+
+        &__block {
+            @media (min-width: 1025px) {
+                width: 60%;
+            }
+
+            padding: 2rem 0;
+
+            @media (min-width: 1024px) {
+                justify-content: flex-end;
+            }
         }
     }
 
