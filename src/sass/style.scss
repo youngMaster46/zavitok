@@ -574,11 +574,12 @@ html {
     width: 100%;
     overflow: hidden;
     margin: 0 auto;
+    @include line-gradient(45deg, $four-color, $contact-color 2px, 135deg, $four-color, $contact-color 2px);
 
     &__wrapper {
         display: flex;
         min-height: 300px;
-        width: 400%;
+        width: 300%;
         max-height: 1200px;
     }
 
@@ -589,7 +590,8 @@ html {
     }
 
     &__image {
-        width: 100%;
+        width: 70%;
+        margin: 0 15%;
 
     }
 
@@ -602,6 +604,8 @@ html {
         padding: 0 5%;
         justify-content: space-between;
         text-align: center;
+        width: 70%;
+        margin: 0 15%;
 
         @media (min-width: 1024px) {
             justify-content: flex-end;
@@ -1007,6 +1011,7 @@ html {
         }
 
         &__block {
+            margin:0;
             @media (min-width: 1025px) {
                 width: 60%;
             }
