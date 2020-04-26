@@ -389,22 +389,12 @@ html {
     &__group {
         margin-top: 1rem;
         color: gray;
-        border: 3px dashed gray;
-        border-radius: 50%;
-        padding: 1rem;
+        padding: 2rem;
         cursor: pointer;
         transition: .5s;
 
         a {
             transition: .5s;
-        }
-
-        &:hover {
-            border-color: $additional-color;
-        }
-
-        &:hover a {
-            color: $third-color;
         }
     }
 
@@ -1046,4 +1036,9 @@ html {
 .scale2x {
     transform: scale(2);
     z-index: 99;
+}
+
+.svg-link {
+    background: url("/../img/vk.svg");
+
 }

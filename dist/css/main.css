@@ -181,7 +181,28 @@
   .header .zavitok-logo {
     color: white; }
     .header .zavitok-logo__heading {
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      display: inline-block;
+      position: relative; }
+      .header .zavitok-logo__heading:after {
+        content: '';
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-image: url("/../img/anvil.svg");
+        right: -2rem;
+        top: -.4rem; }
+        @media (min-width: 769px) {
+          .header .zavitok-logo__heading:after {
+            width: 3rem;
+            height: 3rem;
+            right: -3rem; } }
+        @media (min-width: 1440px) {
+          .header .zavitok-logo__heading:after {
+            width: 4rem;
+            height: 4rem;
+            right: -4rem;
+            top: -1rem; } }
       @media (min-width: 768px) {
         .header .zavitok-logo__heading {
           font-size: 1.6rem; } }
@@ -317,7 +338,28 @@
   .footer .zavitok-logo {
     color: white; }
     .footer .zavitok-logo__heading {
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      display: inline-block;
+      position: relative; }
+      .footer .zavitok-logo__heading:after {
+        content: '';
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-image: url("/../img/anvil.svg");
+        right: -2rem;
+        top: -.4rem; }
+        @media (min-width: 769px) {
+          .footer .zavitok-logo__heading:after {
+            width: 3rem;
+            height: 3rem;
+            right: -3rem; } }
+        @media (min-width: 1440px) {
+          .footer .zavitok-logo__heading:after {
+            width: 4rem;
+            height: 4rem;
+            right: -4rem;
+            top: -1rem; } }
       @media (min-width: 768px) {
         .footer .zavitok-logo__heading {
           font-size: 1.6rem; } }
@@ -331,17 +373,11 @@
   .footer__group {
     margin-top: 1rem;
     color: gray;
-    border: 3px dashed gray;
-    border-radius: 50%;
-    padding: 1rem;
+    padding: 2rem;
     cursor: pointer;
     transition: .5s; }
     .footer__group a {
       transition: .5s; }
-    .footer__group:hover {
-      border-color: #fc9f4e; }
-    .footer__group:hover a {
-      color: #0026ff; }
   .footer .developer {
     color: gray;
     padding-top: 1rem;
@@ -816,4 +852,7 @@
 .scale2x {
   transform: scale(2);
   z-index: 99; }
+
+.svg-link {
+  background: url("/../img/vk.svg"); }
 
