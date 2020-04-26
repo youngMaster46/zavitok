@@ -15,6 +15,9 @@ const createBack = () => {
     back.classList.add('max')
     back.style.background = "rgba(0,0,0,.8)"
     document.body.append(back)
+    back.addEventListener('click', () => {
+        destroyMenu()
+    })
 }
 const deleteBack = () => {
     const back = getFirstClassName('max')
@@ -35,6 +38,12 @@ menuBtn.addEventListener('click', () => {
     mymenu.classList.toggle('header-navigation_active')
     toggleBack()
 })
+
+function destroyMenu() {
+    deleteBack()
+    mymenu.classList.remove('header-navigation_active')
+    menuBtn.classList.remove('menu-btn_active')
+}
 window.addEventListener('resize', () => {
     // on resize screen return default behavior of menu and gamburger button
     deleteBack()

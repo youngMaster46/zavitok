@@ -416,8 +416,6 @@
     .main-list__image {
       max-width: 100%;
       transition: .7s; }
-      .main-list__image:hover {
-        transform: scale(2); }
 
 .latest-work {
   text-align: center;
@@ -465,9 +463,6 @@
     width: 100%;
     transition: .7s;
     opacity: .9; }
-    .latest-work__image:hover {
-      transform: scale(2);
-      opacity: 1; }
 
 .gallery {
   position: relative;
@@ -754,9 +749,6 @@
   .more__image {
     transition: .5s;
     width: 100%; }
-    .more__image:hover {
-      transform: scale(2);
-      z-index: 999; }
   .more__hint {
     position: absolute;
     padding: 1rem 0;
@@ -821,4 +813,8 @@
     @media (min-width: 1024px) {
       .gallery-page__name {
         font-size: 1.6rem; } }
+
+.scale2x {
+  transform: scale(2);
+  z-index: 99; }
 

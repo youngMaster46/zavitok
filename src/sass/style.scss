@@ -132,6 +132,7 @@ html {
             flex-direction: column;
             transition: .5s;
             margin-left: .5rem;
+
             @media (min-width: 1024px) {
                 flex-direction: row;
                 margin-right: .5rem;
@@ -505,9 +506,7 @@ html {
             max-width: 100%;
             transition: .7s;
 
-            &:hover {
-                transform: scale(2);
-            }
+
         }
     }
 }
@@ -576,12 +575,6 @@ html {
         width: 100%;
         transition: .7s;
         opacity: .9;
-
-        &:hover {
-            transform: scale(2);
-            opacity: 1;
-        }
-
     }
 }
 
@@ -947,10 +940,6 @@ html {
         transition: .5s;
         width: 100%;
 
-        &:hover {
-            transform: scale(2);
-            z-index: 999;
-        }
     }
 
     &__hint {
@@ -1008,7 +997,7 @@ html {
             max-height: unset;
 
             // gallery position is absolute, that's why ...
-            
+
 
         }
 
@@ -1017,7 +1006,7 @@ html {
             display: flex;
             justify-content: center;
 
-          
+
         }
 
         &__image {
@@ -1052,4 +1041,9 @@ html {
             font-size: 1.6rem;
         }
     }
+}
+
+.scale2x {
+    transform: scale(2);
+    z-index: 99;
 }
