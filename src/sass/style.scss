@@ -991,9 +991,51 @@ html {
 
 // gallery.html page
 .gallery-page {
+    display: flex;
+    flex-direction: column;
+
+
     & .gallery {
+        display: flex;
+        flex-direction: column;
+        
+
+        &__wrapper {
+            width: 300%;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            min-height: unset;
+            max-height: unset;
+            // gallery position is absolute, that's why ...
+
+        }
+
+        &__elem {
+            @include line-gradient(45deg, $four-color, $second-linear-color 2px, 135deg, $four-color, $second-linear-color 2px);
+
+            display: flex;
+            width: auto;
+            justify-content: center;
+        }
+
         &__image {
-            width: 100%;    
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__name {
+        color: white;
+        font-size: 1.3rem;
+        @include line-gradient(45deg, $four-color, $second-linear-color 2px, 135deg, $four-color, $second-linear-color 2px);
+        border: unset;
+
+        text-align: center;
+        padding: 1rem;
+
+        @media (min-width: 1024px) {
+            font-size: 1.6rem;
         }
     }
 }

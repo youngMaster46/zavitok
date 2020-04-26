@@ -3,11 +3,11 @@ import {
 } from "./helpers";
 
 class Gallery {
-    constructor(galleryName) {
+    constructor(galleryName, whichGallery = 0) {
         // get parent
         this.parentWrapper = getFirstClassName(galleryName);
         // get array of children
-        this.childrensElems = getFirstClassName(galleryName).childNodes;
+        this.childrensElems = getFirstClassName(galleryName, whichGallery).childNodes;
         // transform nodelist into array
         this._transformElems();
         // automatically moving gallery
@@ -34,7 +34,6 @@ class Gallery {
         const firstElem = this.childrensElems.shift();
         this.childrensElems.push(firstElem);
         this.insertDOM();
-        debugger;
     }
     insertDOM() {
         this.parentWrapper.innerHTML = ''

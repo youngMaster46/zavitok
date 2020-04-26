@@ -783,6 +783,35 @@
       .main-about > .contact-us .contact-us__heading {
         font-size: 1.6rem; } }
 
-.gallery-page .gallery__image {
-  width: 100%; }
+.gallery-page {
+  display: flex;
+  flex-direction: column; }
+  .gallery-page .gallery {
+    display: flex;
+    flex-direction: column; }
+    .gallery-page .gallery__wrapper {
+      width: 300%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      min-height: unset;
+      max-height: unset; }
+    .gallery-page .gallery__elem {
+      background-image: repeating-linear-gradient(45deg, #23263a, transparent 2px, #141414 2px), repeating-linear-gradient(135deg, #23263a, #141414 2px);
+      display: flex;
+      width: auto;
+      justify-content: center; }
+    .gallery-page .gallery__image {
+      width: auto;
+      height: auto; }
+  .gallery-page__name {
+    color: white;
+    font-size: 1.3rem;
+    background-image: repeating-linear-gradient(45deg, #23263a, transparent 2px, #141414 2px), repeating-linear-gradient(135deg, #23263a, #141414 2px);
+    border: unset;
+    text-align: center;
+    padding: 1rem; }
+    @media (min-width: 1024px) {
+      .gallery-page__name {
+        font-size: 1.6rem; } }
 

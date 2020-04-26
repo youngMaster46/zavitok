@@ -30,8 +30,9 @@ const toggleBack = () => {
         deleteBack()
     }
 }
-export default menuBtn.addEventListener('click', () => {
+menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('menu-btn_active')
     mymenu.classList.toggle('header-navigation_active')
     toggleBack()
 })
+export default menuBtn

@@ -24,6 +24,7 @@ module.exports = {
             from: path.resolve(__dirname + '/src/video'),
             to: path.resolve(__dirname + '/dist/video')
         }]),
+        
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html'
