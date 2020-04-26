@@ -9,9 +9,12 @@ export const reduceImages = (parent) => {
 }
 
 function funcImg(child) {
-    if (child.children[0].tagName.toLowerCase() == 'img') {
+    if (isImg(child.children[0])) {
         child.children[0].classList.toggle('scale2x')
-    } else if (child.children[0].children[0].tagName.toLowerCase() == 'img') {
+    } else if (isImg(child.children[0].children[0])) {
         child.children[0].children[0].classList.toggle('scale2x')
     }
+}
+function isImg(child) {
+    return child.tagName.toLowerCase() == 'img'
 }
