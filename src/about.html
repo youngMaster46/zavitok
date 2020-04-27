@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Художественная ковка Завиток - узнать о нас, подробная информация о нашей работе</title>
@@ -16,7 +16,7 @@
 
 <body class='container'>
     <header class='header'>
-        <p class='menu-btn '><span class="hamburger"></p>
+        <p class='menu-btn '><span class="hamburger"></span></p>
         <nav class='header-navigation'>
             <ul class='header-navigation__list'>
                 <li class="header-navigation__item  "><a href='index.html' class='link header__link'>Главная</a>
@@ -52,20 +52,14 @@
                     <p class='history__text'>У нас более тысячи выполненых заказов различной сложности, от самых простых
                         до максимально
                         сложных и гибких одновременно</p>
-                    <p class='history__text'>Мы работаем каждый день</a>, исключая праздники</p>
+                    <p class='history__text'>Мы работаем каждый день, исключая праздники</p>
 
                 </div>
                 <div class="movie history__movie">
-                    <video autoplay poster='img/logo.png' loop style='max-width:100%' width="100%" height="300">
+                    <video autoplay poster='img/logo.png' loop style='max-width:100%'  height="300">
                         <source src="video/video.mp4" type="video/mp4">
                         <!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
-                        <source src="video.webm" type="video/webm"><!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
-                        <source src="video.ogv" type="video/ogg">
-                        <!-- Ogg/Vorbis для старых версий браузеров Firefox и Opera -->
-                        <object data="video.swf" type="application/x-shockwave-flash">
-                            <!-- добавляем видеоконтент для устаревших браузеров, в которых нет поддержки элемента video -->
-                            <param name="movie" value="video.swf">
-                        </object>
+                        <source src="video/video.webm" type="video/webm"><!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
                     </video>
                 </div>
             </div>
@@ -92,7 +86,7 @@
             </div>
             <div class="contact-us__contact-form">
                 <h2 class="contact-us__heading">Форма для связи</h2>
-                <form action="" class='contact-us__form' name='my-form'>
+                <form  class='contact-us__form' name='my-form'>
                     <input name='name' type="text" class="contact-us__input" placeholder="Имя*">
                     <input name='tel' type="text" class="contact-us__input" placeholder="Номер*">
                     <textarea name='text' class='contact-us__textarea' placeholder="Сообщение"></textarea>
