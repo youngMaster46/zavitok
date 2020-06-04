@@ -25,6 +25,9 @@ module.exports = {
             to: path.resolve(__dirname + '/dist/video')
         }]),
         
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].css',
+        }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html'
@@ -43,9 +46,6 @@ module.exports = {
         }),
 
 
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
-        }),
 
 
     ],
