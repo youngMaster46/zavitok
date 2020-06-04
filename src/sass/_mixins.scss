@@ -100,13 +100,13 @@
     position: absolute;
     height: 32px;
     width: 32px;
-    left: -36px;
-    top: -10px;
+    top: calc(50% - 16px);
+    left: -5%;
 
 
     @media (min-width: 1024px) {
-        top: -5px;
-        left: -44px;
+        top: calc(50% - 16px);
+        left: -5%;
 
     }
 }
